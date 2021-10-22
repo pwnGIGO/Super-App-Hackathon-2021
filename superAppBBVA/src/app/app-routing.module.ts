@@ -15,6 +15,21 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
   },
+<<<<<<< Updated upstream
+=======
+  {
+    path: 'operaciones',
+    loadChildren: () => import('./paginas/operaciones/operaciones.module').then( m => m.OperacionesPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./paginas/mensajeria/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'contactos',
+    loadChildren: () => import('./paginas/mensajeria/contactos/contactos.module').then( m => m.ContactosPageModule)
+  }
+>>>>>>> Stashed changes
 ];
 
 @NgModule({

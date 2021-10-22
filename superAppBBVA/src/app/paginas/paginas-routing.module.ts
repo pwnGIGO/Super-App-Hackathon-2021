@@ -15,9 +15,25 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+<<<<<<< Updated upstream
+=======
+  },
+  {
+    path: 'operaciones',
+    loadChildren: () => import('./operaciones/operaciones.module').then( m => m.OperacionesPageModule)
+  },
+  {
+    path: 'contactos',
+    loadChildren: () => import('./mensajeria/contactos/contactos.module').then( m => m.ContactosPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./mensajeria/chat/chat.module').then( m => m.ChatPageModule)
+>>>>>>> Stashed changes
   }
 
 ];
