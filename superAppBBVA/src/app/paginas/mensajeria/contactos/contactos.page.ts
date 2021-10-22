@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-contactos',
   templateUrl: './contactos.page.html',
@@ -8,17 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class ContactosPage implements OnInit {
 
   dataSetPrueba = [
-    {"nombre": "Antonio", "texto": "Hola!"},
-    {"nombre": "Felipe", "texto": "Si pudiste?"},
-    {"nombre": "Chucho", "texto": "Ya te hice el depósito"},
-    {"nombre": "Gabo", "texto": "Gabo se ha unido a BBVA"},
-    {"nombre": "Rodrigo", "texto": "Rodrigo mandó una imagen"}
+  {"id": 1, "nombre": "Antonio", "texto": "Hola!"},
+  {"id": 2, "nombre": "Felipe", "texto": "Si pudiste?"},
+  {"id": 3, "nombre": "Chucho", "texto": "Ya te hice el depósito"},
+  {"id": 4, "nombre": "Gabo", "texto": "Gabo se ha unido a BBVA"},
+  {"id": 5, "nombre": "Rodrigo", "texto": "Rodrigo mandó una imagen"}
   ];
 
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
+  abreChat(id){
+    console.log("id: "+ id)
+    this.navCtrl.navigateForward('/chat');
+  }
 }

@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
   }
 
   enviaDatos(){
+    console.log("Entre")
     let json = {usuario: this.usuario, password: this.pass};
     this.peticion.login(json).subscribe((res: any) => {
       console.log(res);

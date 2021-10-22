@@ -1,11 +1,45 @@
 <app-cabecera titulo="BBVA Contactos"></app-cabecera>
 
 <ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col class="colBotonFab">
+                <ion-fab-button class="botonFab">
+                    <ion-icon
+                    name="people-outline"
+                    size="large"
+                    ></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+
+            <ion-col class="colBotonFab">
+                <ion-fab-button class="botonFab">
+                    <ion-icon
+                    name="call-outline"
+                    size="large"
+                    ></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+
+            <ion-col class="colBotonFab">
+                <ion-fab-button class="botonFab">
+                    <ion-icon
+                    name="construct-outline"
+                    size="large"
+                    ></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
     <ion-list *ngFor="let item of dataSetPrueba">
-        <ion-item button="true" (click)="muestraEstados($event)">
+        <ion-item button="true" (click)="abreChat(item.id)">
             <ion-icon name="chatbubbles-outline"></ion-icon>
             <ion-label>{{ item.nombre }}</ion-label>
             <p>{{ item.texto }}</p>
         </ion-item>
     </ion-list>
+
+
 </ion-content>
