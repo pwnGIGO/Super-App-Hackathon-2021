@@ -2,23 +2,37 @@
 
 <ion-content>
 
-   <h1 class="title" align="center">Hola</h1>
-   <h6 class="title" align="center">Rodrigo</h6>
-   <h5 class="title" align="center">Cambiar de usuario</h5>
+    <h1 class="title" align="center">Hola</h1>
+    <h6 class="title" align="center">Rodrigo</h6>
+    <h5 class="title" align="center">Cambiar de usuario</h5>
 
 
-   <ion-item lines="full">
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" #passwordEyeRegister (ionChange)="guardaValores($event)" required>
-      </ion-input>
-   </ion-item>
+    <ion-item lines="full">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" #passwordEyeRegister (ionChange)="guardaValores($event)" required>
+        </ion-input>
+    </ion-item>
 
 
-   <ion-row>
-     <ion-col>
-       <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
-       <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
-    </ion-col>
- </ion-row>
+    <ion-row>
+        <ion-col>
+            <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
+            <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
+        </ion-col>
+    </ion-row>
+
+    <ion-card>
+        <ion-icon name="shield-sharp"></ion-icon>
+        <ion-card-header>
+            <ion-card-title>Token Móvil</ion-card-title>
+        </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+        <ion-icon name="qr-code-sharp"></ion-icon>
+        <ion-card-header>
+            <ion-card-title>Operación QR + CoDi</ion-card-title>
+        </ion-card-header>
+    </ion-card>
 
 </ion-content>
