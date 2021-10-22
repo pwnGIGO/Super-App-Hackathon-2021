@@ -6,10 +6,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ComponentesModule } from './componentes/componentes.module';
 
-import { HttpClientModule } from '@angular/common/http';
+import { ComponentesModule } from './componentes/componentes.module';
 import { HttpService } from './servicios/http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,10 +20,7 @@ import { HttpService } from './servicios/http.service';
     ComponentesModule,
     HttpClientModule
   ],
-  providers: [
-  { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-   HttpService
-   ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, HttpService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

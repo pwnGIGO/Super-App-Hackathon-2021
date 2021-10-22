@@ -8,15 +8,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'login',
     loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
   },
-<<<<<<< Updated upstream
-=======
   {
     path: 'operaciones',
     loadChildren: () => import('./paginas/operaciones/operaciones.module').then( m => m.OperacionesPageModule)
@@ -29,7 +27,6 @@ const routes: Routes = [
     path: 'contactos',
     loadChildren: () => import('./paginas/mensajeria/contactos/contactos.module').then( m => m.ContactosPageModule)
   }
->>>>>>> Stashed changes
 ];
 
 @NgModule({

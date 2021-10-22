@@ -19,8 +19,6 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-<<<<<<< Updated upstream
-=======
   },
   {
     path: 'operaciones',
@@ -33,7 +31,6 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./mensajeria/chat/chat.module').then( m => m.ChatPageModule)
->>>>>>> Stashed changes
   }
 
 ];
