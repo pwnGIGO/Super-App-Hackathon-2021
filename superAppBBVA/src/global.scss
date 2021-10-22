@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* **************************
+    Tipografía
+************************** */
+@font-face {
+  font-family: Beton-sans;
+  src: url("assets/fuentes/Benton-Sans/bentonsanslight/BentonSans Light.otf");
+}
+// **************************
+
+/* **************************
+    Estilos de la cabecera
+************************** */
+.cabecera {
+  padding-right: 48px;
+  height: 5em;
+  text-align: center;
+  --background: #072146;
+  color: white;
+  font-family: Beton-sans;
+}
+// **************************

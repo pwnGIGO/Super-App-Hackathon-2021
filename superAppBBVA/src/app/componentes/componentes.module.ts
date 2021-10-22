@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CabeceraComponent } from './cabecera/cabecera.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 
 @NgModule({
   declarations: [
-    CabeceraComponent
+    CabeceraComponent,
+    MenuPrincipalComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports: [
-    CabeceraComponent
+    CabeceraComponent,
+    MenuPrincipalComponent
   ]
 })
 export class ComponentesModule { }
