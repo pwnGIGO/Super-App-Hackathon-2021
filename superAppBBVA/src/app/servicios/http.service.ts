@@ -19,4 +19,11 @@ export class HttpService {
   obtenerJSONremoto(url: string) {
     return this.http.get(this.rutaRemota + url);
   }
+
+  login(datosUsuario: any){
+    const path = 'https://';
+    console.log("GUARDA:");
+    console.log(datosUsuario);
+    return this.http.post<any>(path, datosUsuario);
+  }
 }
