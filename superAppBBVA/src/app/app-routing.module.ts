@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'contactos',
     loadChildren: () => import('./paginas/mensajeria/contactos/contactos.module').then( m => m.ContactosPageModule)
+  },
+  {
+    path: 'personalizacion',
+    loadChildren: () => import('./paginas/personalizacion/personalizacion.module').then( m => m.PersonalizacionPageModule)
   }
 ];
 

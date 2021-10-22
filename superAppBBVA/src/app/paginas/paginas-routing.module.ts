@@ -31,7 +31,11 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./mensajeria/chat/chat.module').then( m => m.ChatPageModule)
+  },  {
+    path: 'personalizacion',
+    loadChildren: () => import('./personalizacion/personalizacion.module').then( m => m.PersonalizacionPageModule)
   }
+
 
 ];
 
