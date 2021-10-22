@@ -2,12 +2,6 @@
 
 <ion-content>
 
-  <div ng-if="usuario.tipoCliente === 'Nuevo'">
-    <ion-label>Solicitar tarjeta física</ion-label>
-    <ion-checkbox checked="false"></ion-checkbox>
-  </div>
-
-
   <ion-slides pager="true">
     <ion-slide *ngFor="let slide of slides">
       <ion-card mode="ios">
