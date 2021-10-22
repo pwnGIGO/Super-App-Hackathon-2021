@@ -10,6 +10,12 @@ export class PersonalizacionPage implements OnInit {
 
   constructor(private alertCtrl: AlertController, private navCtrl: NavController) { }
 
+  usuario: {
+    id: 1,
+    //tipoCliente: "Nuevo"
+    tipoCliente: "Viejo"
+  }
+
   ngOnInit() {
   }
 
