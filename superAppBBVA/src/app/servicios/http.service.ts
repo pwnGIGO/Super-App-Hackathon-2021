@@ -22,8 +22,7 @@ export class HttpService {
 
   login(datosUsuario: any){
     const path = 'https://api-g1.herokuapp.com/auth/v1/login';
-    console.log("GUARDA:");
-    console.log(datosUsuario);
+
     return this.http.post<any>(path, datosUsuario);
   }
 }

@@ -24,12 +24,11 @@ export class LoginPage implements OnInit {
   }
 
   enviaDatos(){
-    console.log("Enviar");
     let json = {usuario: this.usuario, password: this.pass};
-    console.log(json);
-
-    this.peticion.login(json).subscribe((result) => {
-      console.log(result);
-    });
+    this.peticion.login(json).subscribe((res: any) => {
+      console.log(res);
+    }, (error) => {
+      console.log("Catch error ");
+    })
   }
 }

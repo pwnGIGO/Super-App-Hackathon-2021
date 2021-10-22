@@ -10,15 +10,15 @@
    <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" #passwordEyeRegister (ionChange)="guardaValores($event)" required>
-    </ion-input>
-</ion-item>
+      </ion-input>
+   </ion-item>
 
 
-<ion-row>
-    <ion-col>
-        <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
-        <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
+   <ion-row>
+     <ion-col>
+       <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
+       <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
     </ion-col>
-</ion-row>
+ </ion-row>
 
 </ion-content>
