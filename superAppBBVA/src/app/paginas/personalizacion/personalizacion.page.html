@@ -1,5 +1,17 @@
 <app-cabecera titulo="Personaliza tu tarjeta"></app-cabecera>
 
 <ion-content>
+  
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slides">
+      <ion-card mode="ios">
+        <img [src]="slide.img">
+      </ion-card>
+    </ion-slide>
+    
+  </ion-slides>
+
+
+
   <ion-button mode="ios" expand="block" (click)="enviaSolicitud()">Solicitar</ion-button>
 </ion-content>
