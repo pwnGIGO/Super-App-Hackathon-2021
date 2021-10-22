@@ -8,12 +8,13 @@ import { HttpService } from '../../servicios/http.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(
-    private peticion: HttpService
-    ) { }
-
   pass = "";
   usuario = "Rodrigo";
+  
+  constructor(
+    private peticion: HttpService
+    ) {
+  }
 
   ngOnInit() {
   }
@@ -31,6 +32,4 @@ export class LoginPage implements OnInit {
       console.log(result);
     });
   }
-
-
 }

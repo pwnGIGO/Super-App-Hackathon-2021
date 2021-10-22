@@ -1,27 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-cabecera titulo="BBVA"></app-cabecera>
 
 <ion-content>
-    
-    <ion-label position="floating">Hola</ion-label>
-    <ion-label position="floating">Rodrigo</ion-label>
-    <ion-label position="floating">Cambiar de usuario</ion-label>
-  
 
-  <ion-item lines="full">
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input type="password" (ionChange)="guardaValores($event)" required></ion-input>
-  </ion-item>
+   <h1 class="title" align="center">Hola</h1>
+   <h6 class="title" align="center">Rodrigo</h6>
+   <h5 class="title" align="center">Cambiar de usuario</h5>
 
-  <ion-row>
+
+   <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" #passwordEyeRegister (ionChange)="guardaValores($event)" required>
+    </ion-input>
+</ion-item>
+
+
+<ion-row>
     <ion-col>
-      <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
-      
-      <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
+        <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
     </ion-col>
-  </ion-row>
+</ion-row>
 
 </ion-content>
