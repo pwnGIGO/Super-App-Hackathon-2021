@@ -3,32 +3,40 @@
   menuId="menuPrincipal"
   contentId="menu-principal"
 >
-  <ion-header mode="md">
-    <ion-toolbar color="primary">
-      <ion-title class="ion-text-wrap">Menú Principal</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-content>
-    <img src="assets/icon/uam.jpg">
+    <div class="menuPrincipal">
+      <ion-list style="background: transparent;">
+        <ion-menu-toggle *ngFor="let item of elementos">
+          <ion-item
+            class="itemMenu"
+            lines="none"
+            [routerLink]="item.path"
+          >
+            <ion-icon
+            class="iconoMenu"
+              slot="start"
+              [name]="item.icono"
+            ></ion-icon>
 
-    <ion-list>
-      <ion-menu-toggle *ngFor="let item of elementos">
-        <ion-item
-          [routerLink]="item.path"
-          detail="true"
-        >
-          <ion-icon
-            slot="start"
-            [name]="item.icono"
-            color="primary"
-          ></ion-icon>
+            <label class="ion-text-wrap">{{ item.elemento }}</label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
 
-          <label
-            class="ion-text-wrap"
-          >{{ item.elemento }}</label>
-        </ion-item>
-      </ion-menu-toggle>
-    </ion-list>
+      <!-- <ion-list>
+        <ion-menu-toggle *ngFor="let item of elementos">
+          <ion-item class="itemMenu"
+            [routerLink]="item.path"
+          >
+            <ion-icon
+              slot="start"
+              [name]="item.icono"
+            ></ion-icon>
+  
+            <label class="ion-text-wrap">{{ item.elemento }}</label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list> -->
+    </div>
   </ion-content>
 </ion-menu>

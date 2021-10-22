@@ -8,7 +8,7 @@ export class HttpService {
 
   constructor(private http: HttpClient) {}
 
-  rutaLocal = "assets/Archivos JSON/";
+  rutaLocal = "assets/archivos_JSON/";
   rutaRemota = ""; //POR DEFINIR
 
   
