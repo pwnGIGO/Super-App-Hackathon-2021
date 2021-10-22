@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../servicios/http.service';
 
 @Component({
   selector: 'app-menu-principal',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-principal.component.scss'],
 })
 export class MenuPrincipalComponent implements OnInit {
+  elementos;
 
-  constructor() { }
+  constructor(
+    private http: HttpService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.http.obtenerJSONlocal('/elementos-menu.json').subscribe(
+      (res) => {
+        this.elementos = res;
+      }
+    ); 
+  }
 
 }

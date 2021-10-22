@@ -26,23 +26,47 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* **************************
-    Tipografía
-************************** */
-@font-face {
-  font-family: Beton-sans;
-  src: url("assets/fuentes/Benton-Sans/bentonsanslight/BentonSans Light.otf");
-}
-// **************************
-
-/* **************************
     Estilos de la cabecera
 ************************** */
+@font-face {
+  font-family: Beton-sans-light;
+  src: url("assets/fuentes/Benton-Sans/bentonsanslight/BentonSans Light.otf");
+}
+
+@font-face {
+    font-family: Beton-sans-medium;
+    src: url("assets/fuentes/Benton-Sans/bentonsansmedium/BentonSans Medium.otf");
+}
+
 .cabecera {
-  padding-right: 48px;
+  // padding-right: 48px;
   height: 5em;
   text-align: center;
   --background: #072146;
   color: white;
-  font-family: Beton-sans;
+  font-family: Beton-sans-light;
 }
-// **************************
+
+/* **************************
+    Estilos de la menú principal
+************************** */
+.menuPrincipal {
+  height: 100%;
+  background-image: url("../src/assets/imagenes/fondoBBVA.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemMenu {
+  --background: transparent;
+  font-family: Beton-sans-medium;
+  color: white;
+}
+
+.iconoMenu {
+  color: white;
+}
