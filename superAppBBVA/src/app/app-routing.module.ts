@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'personalizacion',
     loadChildren: () => import('./paginas/personalizacion/personalizacion.module').then( m => m.PersonalizacionPageModule)
+  },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./paginas/noticias/noticias.module').then( m => m.NoticiasPageModule)
+  },
+  {
+    path: 'noticia',
+    loadChildren: () => import('./paginas/noticias/noticia/noticia.module').then( m => m.NoticiaPageModule)
   }
 ];
 

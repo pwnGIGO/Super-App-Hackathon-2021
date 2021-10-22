@@ -1,0 +1,21 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { NoticiaPageRoutingModule } from './noticia-routing.module';
+
+import { NoticiaPage } from './noticia.page';
+import { ComponentesModule } from '../../../componentes/componentes.module';
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    NoticiaPageRoutingModule,
+    ComponentesModule
+  ],
+  declarations: [NoticiaPage]
+})
+export class NoticiaPageModule {}

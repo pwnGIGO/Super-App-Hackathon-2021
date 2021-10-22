@@ -34,6 +34,10 @@ const routes: Routes = [
   },  {
     path: 'personalizacion',
     loadChildren: () => import('./personalizacion/personalizacion.module').then( m => m.PersonalizacionPageModule)
+  },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./noticias/noticias.module').then( m => m.NoticiasPageModule)
   }
 
 
