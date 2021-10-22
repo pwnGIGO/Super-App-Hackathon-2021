@@ -34,8 +34,8 @@
 }
 
 @font-face {
-    font-family: Beton-sans-medium;
-    src: url("assets/fuentes/Benton-Sans/bentonsansmedium/BentonSans Medium.otf");
+  font-family: Beton-sans-medium;
+  src: url("assets/fuentes/Benton-Sans/bentonsansmedium/BentonSans Medium.otf");
 }
 
 .cabecera {
@@ -69,4 +69,19 @@
 
 .iconoMenu {
   color: white;
+}
+
+/* **************************
+    Varios
+************************** */
+.colBotonFab {
+    padding: 1em 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonFab {
+    width: 7em;
+    height: 7em;
 }
