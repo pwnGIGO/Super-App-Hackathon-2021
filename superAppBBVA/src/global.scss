@@ -75,13 +75,21 @@
     Varios
 ************************** */
 .colBotonFab {
-    padding: 1em 0em;
+  padding: 1em 0em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.colLabel{  
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0px;
+}
+
 .botonFab {
-    width: 7em;
-    height: 7em;
+  width: 7em;
+  height: 7em;
 }
