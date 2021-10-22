@@ -1,0 +1,52 @@
+[
+  {
+    "elemento": "Seguridad y privacidad",
+    "icono": "lock-closed-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Token móvil",
+    "icono": "shield-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Sostenibilidad",
+    "icono": "leaf-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Operaciones QR + CoDi®",
+    "icono": "qr-code-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Consulta retiro sin tarjeta",
+    "icono": "reload-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Sucursales y cajeros",
+    "icono": "location-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Aclaraciones",
+    "icono": "sync-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Línea BBVA",
+    "icono": "call-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Aplicaciones",
+    "icono": "apps-sharp",
+    "path": ""
+  },
+  {
+    "elemento": "Acerca de BBVA",
+    "icono": "alert-circle-sharp",
+    "path": ""
+  }
+]
