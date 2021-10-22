@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../servicios/http.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private peticion: HttpService
+    ) { }
 
   pass = "";
   usuario = "Rodrigo";
@@ -23,6 +26,10 @@ export class LoginPage implements OnInit {
     console.log("Enviar");
     let json = {usuario: this.usuario, password: this.pass};
     console.log(json);
+
+    this.peticion.login(json).subscribe((result) => {
+      console.log(result);
+    });
   }
 
 
