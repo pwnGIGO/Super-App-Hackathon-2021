@@ -21,14 +21,14 @@ export class ChatPage implements OnInit {
 
     this.paramData = {
       name: "Antonio",
-      image: "../../../../assets/chat/chat5.jpg"
+      image: "assets/chat/chat5.jpg"
     };
 
     this.msgList = [
     {
       userId: "HealthBot",
       userName: "HealthBot",
-      userAvatar: "../../../../assets/chat/chat4.jpg",
+      userAvatar: "assets/chat/chat4.jpg",
       time: "12:00",
       message: "Que onda, cómo estás?",
       id: 0
@@ -36,7 +36,7 @@ export class ChatPage implements OnInit {
     {
       userId: "Me",
       userName: "Me",
-      userAvatar: "../../../../assets/chat/chat5.jpg",
+      userAvatar: "assets/chat/chat5.jpg",
       time: "12:03",
       message: "Bien, ya te hice el pago por BBVA :D",
       id: 1,
@@ -44,7 +44,7 @@ export class ChatPage implements OnInit {
     {
       userId: "HealthBot",
       userName: "HealthBot",
-      userAvatar: "../../../../assets/chat/chat4.jpg",
+      userAvatar: "assets/chat/chat4.jpg",
       time: "12:05",
       message: "Sale gracias, ¿cuánto fue lo que depositaste?",
       id: 3
@@ -52,7 +52,7 @@ export class ChatPage implements OnInit {
     {
       userId: "Me",
       userName: "Me",
-      userAvatar: "../../../../assets/chat/chat5.jpg",
+      userAvatar: "assets/chat/chat5.jpg",
       time: "12:06",
       message: "1500, aún me falta la mitad",
       id: 4
@@ -60,7 +60,7 @@ export class ChatPage implements OnInit {
     {
       userId: "HealthBot",
       userName: "HealthBot",
-      userAvatar: "../../../../assets/chat/chat4.jpg",
+      userAvatar: "assets/chat/chat4.jpg",
       time: "12:07",
       message: "Sale, no te preocupes xD",
       id: 5
@@ -75,7 +75,7 @@ export class ChatPage implements OnInit {
       this.msgList.push({
         userId: this.toUser,
         userName: this.toUser,
-        userAvatar: this.paramData.image ? this.paramData.image : "../../../../assets/chat/chat4.jpg",
+        userAvatar: this.paramData.image ? this.paramData.image : "assets/chat/chat4.jpg",
         time: "12:01",
         message: this.user_input,
         id: this.msgList.length + 1
@@ -94,7 +94,7 @@ export class ChatPage implements OnInit {
       this.msgList.push({
         userId: this.User,
         userName: this.User,
-        userAvatar: "../../../../assets/chat/chat5.jpg",
+        userAvatar: "assets/chat/chat5.jpg",
         time: "12:01",
         message: "Ahorita no puedo contestar"
       });

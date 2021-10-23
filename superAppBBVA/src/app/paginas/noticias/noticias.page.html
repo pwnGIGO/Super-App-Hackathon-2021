@@ -1,10 +1,54 @@
 <app-cabecera titulo="Noticias"></app-cabecera>
 
 <ion-content>
+  <!-- Seccion del clima -->
+  <ion-card>
+    <ion-item>
+      <ion-label>
+        <h1>Clima de {{ clima.name }}</h1>
+        <h2>
+          Temperatura: {{ clima.tempc }}
+          <ion-icon name="partly-sunny-outline"></ion-icon>
+        </h2>
+        <h3>
+          Probabilidad de precipitación: {{ clima.probabilityofprecip }}
+          <ion-icon name="rainy-outline"></ion-icon>
+        </h3>
+        <p>Humedad: {{ clima.relativehumidity }} <ion-icon name="rainy-outline"></ion-icon></p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Seccion de gasolina -->
+  <ion-card>
+    <ion-item>
+      <ion-label>
+        <h1>Precio de gasolina <ion-icon name="car-outline"></ion-icon></h1>
+        <h3>
+          Ubicación más cercana: {{ gasolina.calle }}
+        </h3>
+        <p>Precio Magna: {{ gasolina.regular }}</p>
+        <p>Precio Premium: {{ gasolina.premium }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Seccion de gasolina -->
+  <ion-card>
+    <ion-item>
+      <ion-label>
+        <h1>Calidad del aire <ion-icon name="heart-half-outline"></ion-icon></h1>
+        <h2>Lugar: {{ lugar }}</h2>
+        <h2>IMECA: {{ calidad }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- Seccion de noticias -->
   <ion-card *ngFor="let noticia of noticias">
     <ion-item>
       <ion-avatar slot="start">
-        <img src="../../../../assets/card/{{noticia.imagen}}">
+        <img src="assets/card/{{noticia.imagen}}">
       </ion-avatar>
       <ion-label>
         <h3>{{ noticia.autor }}</h3>
@@ -12,7 +56,7 @@
       </ion-label>
     </ion-item>
 
-    <img src="../../../../assets/card/{{noticia.imagen2}}" (click)="abrirNoticia(noticia.id)">
+    <img src="assets/card/{{noticia.imagen2}}" (click)="abrirNoticia(noticia.id)">
     <ion-card-header>
       <ion-card-title>{{ noticia.nota }}</ion-card-title>
     </ion-card-header>
