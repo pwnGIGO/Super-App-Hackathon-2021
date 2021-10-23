@@ -25,6 +25,8 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+
+
 /* **************************
 Fondos
 ************************** */
@@ -89,7 +91,7 @@ Fondos
 }
 
 .iconoMenu {
-  color: #043263;
+  color: white;
 }
 
 /* **************************
@@ -183,26 +185,76 @@ Fondos
   color: black;
 }
 
-.logoFondo {
-  height: 45%;
-  // padding-top: 3em;
-  background-image: url("../src/assets/imagenes/fondoLogin_1.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 26em;
-  // display: flex;
-  // justify-content: center;
-  // align-items: flex-start;
+.cabeceraLogin {
+  padding-bottom: 7em;
+  padding-left: 48px;
+  height: 5em;
+  --background: transparent;
+  color: white;
 }
 
-.itemlogoBBVA {
-    --background: transparent !important;
-    padding-top: 3em;
-    padding-left: 64px;
+.logoCabecera {
+  display: block;
+  width: 5em;
+  margin: auto;
 }
 
-.logoBBVA {
-    display: block;
-    margin: auto;
-    width: 5em;
+.divLogin {
+  background: transparent;
+  height: 90%;
+  padding: 13em 3em;
+  transition: all .3s ease-in-out;
+}
+
+.itemLogin {
+  --background: transparent;
+  border-bottom: solid 1px white;
+}
+
+.labelLogin {
+  color: white !important;
+  font-family: Beton-sans-light;
+}
+
+.iconLogin {
+  color: white;
+}
+
+.inputLogin {
+  --color: white !important;
+  font-family: Beton-sans-light;
+}
+
+.colLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.aLogin {
+  font-family: Beton-sans-medium;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.btonLogin {
+  width: 12em;
+  height: 4em;
+  font-family: Beton-sans-medium;
+  color: white;
+  border: none;
+  background: #1464A5;
+}
+
+.divBotonLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogin {
+  text-align: center;
+  color: white;
+  --background: transparent;
 }

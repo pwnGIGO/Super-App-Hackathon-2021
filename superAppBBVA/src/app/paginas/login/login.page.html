@@ -1,47 +1,115 @@
-<!-- <ion-content class="blueCore"></ion-content>
-
 <ion-header class="ion-no-border">
     <ion-toolbar
         mode="md"
-        class="cabeceraLogin blueCore"
+        class="cabeceraLogin"
     >
-        <div class="itemLogo">
-            <img src="/assets/imagenes/logo.png" class="imgLogo">
-        </div>
-        
+        <ion-img
+            src="/assets/imagenes/logo.png"
+            class="logoCabecera"
+        ></ion-img>
+
         <ion-buttons
-        slot="end"
-        style="height: 5em;"
+            slot="end"
+            style="height: 5em;"
         >
             <ion-menu-button menu="menuPrincipal">
                 <ion-icon
-                class="iconoMenu"
                     name="menu"
                     size="large"
                 ></ion-icon>
             </ion-menu-button>
         </ion-buttons>
     </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
-<ion-content>
-    <div class="logoFondo">
-        <ion-item
-            class="itemlogoBBVA"
-            lines="none"
-        >
-        <ion-img class="logoBBVA" src="\assets\imagenes\bbva-2.svg"></ion-img>
-            <ion-buttons slot="end">
-                <ion-menu-button menu="menuPrincipal">
-                    <ion-icon
-                        class="iconoMenu"
-                        name="menu"
-                        size="large"
-                    ></ion-icon>
-                </ion-menu-button>
-            </ion-buttons>
+<ion-content class="blueCore">
+    <div
+        class="divLogin"
+        #contenido
+    >
+        <ion-item class="itemLogin">
+            <ion-label
+                class="labelLogin"
+                position="floating"
+            >Número celular</ion-label>
+
+            <ion-input
+                class="inputLogin"
+                inputmode="numeric"
+                type="text"
+                (ionFocus)="expandeLogin()"
+            ></ion-input>
         </ion-item>
+
+        <br>
+
+        <ion-row>
+            <ion-col>
+                <ion-item class="itemLogin">
+                    <ion-label
+                        class="labelLogin"
+                        position="floating"
+                    >Contraseña</ion-label>
+
+                    <ion-input
+                        class="inputLogin"
+                        inputmode="text"
+                        [type]="esPass"
+                        (ionFocus)="expandeLogin()"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+
+            <ion-col
+                class="colLogin"
+                size="2"
+            >
+                <ion-icon
+                    class="iconLogin"
+                    *ngIf="!mostrar"
+                    name="eye"
+                    size="large"
+                    (click)="muestraPass()"
+                ></ion-icon>
+
+                <ion-icon
+                    class="iconLogin"
+                    *ngIf="mostrar"
+                    name="eye-off"
+                    size="large"
+                    (click)="muestraPass()"
+                ></ion-icon>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col></ion-col>
+
+            <ion-col
+                class="colLogin"
+                size="10"
+            >
+                <a
+                    class="aLogin"
+                    href=""
+                >Olvidé mi contraseña</a>
+            </ion-col>
+
+            <ion-col></ion-col>
+        </ion-row>
+
+        <div class="divBotonLogin">
+            <button class="btonLogin">Entrar</button>
+        </div>
     </div>
+
+    <ion-item lines="none" class="footerLogin">
+        <ion-label>
+            ¿Quieres usar la app de BBVA?
+
+            <strong>¡Registrate!</strong>
+        </ion-label>
+    </ion-item>
 </ion-content>
 
 <!-- <ion-content>
