@@ -85,6 +85,9 @@ export class OperacionesPage implements OnInit {
       case 3: //Noticias
       this.navCtrl.navigateForward('/noticias');
       break;
+      case 4: //Noticias
+      this.navCtrl.navigateForward('/mapa');
+      break;
     }
   }
 }

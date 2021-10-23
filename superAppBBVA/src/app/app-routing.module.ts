@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'noticia',
     loadChildren: () => import('./paginas/noticias/noticia/noticia.module').then( m => m.NoticiaPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./paginas/mapa/mapa.module').then( m => m.MapaPageModule)
   }
 ];
 
