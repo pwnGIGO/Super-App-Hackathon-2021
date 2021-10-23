@@ -244,7 +244,8 @@ Fondos
   font-family: Beton-sans-medium;
   color: white;
   border: none;
-  background: #1464A5;
+  --background: #1464A5;
+  --box-shadow: none;
 }
 
 .divBotonLogin {

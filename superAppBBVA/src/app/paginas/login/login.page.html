@@ -38,6 +38,7 @@
                 inputmode="numeric"
                 type="text"
                 (ionFocus)="expandeLogin()"
+                (ionChange)="guardaValores($event)"
             ></ion-input>
         </ion-item>
 
@@ -56,6 +57,7 @@
                         inputmode="text"
                         [type]="esPass"
                         (ionFocus)="expandeLogin()"
+                        (ionChange)="guardaValores($event)"
                     ></ion-input>
                 </ion-item>
             </ion-col>
@@ -99,7 +101,7 @@
         </ion-row>
 
         <div class="divBotonLogin">
-            <button class="btonLogin">Entrar</button>
+            <ion-button class="btonLogin" (click)="enviaDatos()">Entrar</ion-button>
         </div>
     </div>
 
