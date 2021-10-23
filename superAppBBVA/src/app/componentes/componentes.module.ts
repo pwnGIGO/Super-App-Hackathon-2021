@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 @NgModule({
   declarations: [
     CabeceraComponent,
-    MenuPrincipalComponent
+    MenuPrincipalComponent,
+    MapaComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
   ],
   exports: [
     CabeceraComponent,
-    MenuPrincipalComponent
+    MenuPrincipalComponent,
+    MapaComponent
   ]
 })
 export class ComponentesModule { }
