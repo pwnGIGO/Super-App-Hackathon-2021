@@ -90,4 +90,9 @@ export class OperacionesPage implements OnInit {
       break;
     }
   }
+
+  prueba(id){
+    //console.log(id);
+    this.navCtrl.navigateForward('/mi-tarjeta');
+  }
 }

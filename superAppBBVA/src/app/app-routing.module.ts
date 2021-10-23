@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./paginas/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'mi-tarjeta',
+    loadChildren: () => import('./paginas/operaciones/mi-tarjeta/mi-tarjeta.module').then( m => m.MiTarjetaPageModule)
   }
 ];
 

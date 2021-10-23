@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: OperacionesPage
+  },  {
+    path: 'mi-tarjeta',
+    loadChildren: () => import('./mi-tarjeta/mi-tarjeta.module').then( m => m.MiTarjetaPageModule)
   }
+
 ];
 
 @NgModule({
