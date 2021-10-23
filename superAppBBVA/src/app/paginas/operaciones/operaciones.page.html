@@ -1,53 +1,251 @@
-<app-cabecera titulo="Hola, Usuario"></app-cabecera>
+<ion-header class="ion-no-border">
+    <ion-toolbar
+        mode="md"
+        class="cabeceraOperaciones"
+    >
+        <ion-title class="ion-text-wrap">Hola, {{ usuario }}</ion-title>
 
-<ion-content>
-  <br>
-  <br>
-  <ion-grid>
-      <ion-row>
-          <ion-col class="colBotonFab">
-              <ion-fab-button class="botonFab" style="--background:#1D4672">
-                  <ion-icon
-                      name="swap-horizontal-sharp"
-                      size="large"
-                  ></ion-icon>
-              </ion-fab-button>
-          </ion-col>
+        <ion-buttons
+            slot="end"
+            style="height: 5em;"
+        >
+            <ion-button>
+                <ion-icon
+                    name="help-circle-sharp"
+                    size="large"
+                ></ion-icon>
+            </ion-button>
 
-          <ion-col class="colBotonFab">
-              <ion-fab-button class="botonFab" style="--background: #F7893B">
-                  <ion-icon
-                      name="add-sharp"
-                      size="large"
-                  ></ion-icon>
-              </ion-fab-button>
-          </ion-col>
+            <ion-menu-button menu="menuPrincipal">
+                <ion-icon
+                    name="menu"
+                    size="large"
+                ></ion-icon>
+            </ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
 
-          <ion-col class="colBotonFab">
-              <ion-fab-button class="botonFab" style="--background:#02A4A6">
-                  <ion-icon
-                      name="phone-portrait-sharp"
-                      size="large"
-                  ></ion-icon>
-              </ion-fab-button>
-          </ion-col>
-      </ion-row>
-  </ion-grid>
+<ion-content class="blueCore">
+    <br>
+    <br>
 
-  <ion-grid>
-    <ion-row>
-        <ion-col class="colBotonFab">
-            <ion-label class="colLabel">Transferir</ion-label>
-        </ion-col>
+    <ion-grid>
+        <ion-row>
+            <ion-col class="colBotonFab">
+                <ion-fab-button
+                    class="botonFab"
+                    style="--background: #1D4672"
+                >
+                    <ion-icon
+                        name="swap-horizontal-sharp"
+                        size="large"
+                    ></ion-icon>
+                </ion-fab-button>
+            </ion-col>
 
-        <ion-col class="colBotonFab">
-          <ion-label class="colLabel">Oportunidades</ion-label>
-      </ion-col>
+            <ion-col class="colBotonFab">
+                <ion-fab-button
+                    class="botonFab"
+                    style="--background: #F7893B"
+                >
+                    <ion-icon
+                        name="add-sharp"
+                        size="large"
+                    ></ion-icon>
+                </ion-fab-button>
+            </ion-col>
 
-      <ion-col class="colBotonFab">
-        <ion-label class="colLabel">Retiro sin tarjeta</ion-label>
-    </ion-col>
+            <ion-col class="colBotonFab">
+                <ion-fab-button
+                    class="botonFab"
+                    style="--background: #02A4A6"
+                >
+                    <ion-icon
+                        name="logo-usd"
+                        size="large"
+                    ></ion-icon>
+                </ion-fab-button>
+            </ion-col>
+        </ion-row>
 
-    </ion-row>
-</ion-grid>
+        <ion-row>
+            <ion-col class="colLabel">
+                <ion-label>Transferir</ion-label>
+            </ion-col>
+
+            <ion-col class="colLabel">
+                <ion-label>Oportunidades</ion-label>
+            </ion-col>
+
+            <ion-col class="colLabel">
+                <ion-label>
+                    Retiro
+
+                    <br>
+                    sin tarjeta
+                </ion-label>
+            </ion-col>
+        </ion-row>
+
+        <div
+            #contenido
+            class="colapsar"
+        >
+            <ion-row>
+                <ion-col class="colBotonFab">
+                    <ion-fab-button
+                        class="botonFab"
+                        style="--background: #1D4672"
+                    >
+                        <ion-icon
+                            name="pricetag-sharp"
+                            size="large"
+                        ></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+
+                <ion-col class="colBotonFab">
+                    <ion-fab-button
+                        class="botonFab"
+                        style="--background: #1D4672"
+                    >
+                        <ion-icon
+                            name="phone-portrait-sharp"
+                            size="large"
+                        ></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+
+                <ion-col class="colBotonFab">
+                    <ion-fab-button
+                        class="botonFab"
+                        style="--background:#1D4672"
+                    >
+                        <ion-icon
+                            name="people-sharp"
+                            size="large"
+                        ></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="colLabel">
+                    <ion-label>
+                        Pagar
+
+                        <br>
+                        servicio
+                    </ion-label>
+                </ion-col>
+
+                <ion-col class="colLabel">
+                    <ion-label>
+                        Recargas
+
+                        <br>
+                        y más
+                    </ion-label>
+                </ion-col>
+
+                <ion-col class="colLabel">
+                    <ion-label>Contactos</ion-label>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="colBotonFab">
+                    <ion-fab-button
+                        class="botonFab"
+                        style="--background: #1D4672"
+                    >
+                        <ion-icon
+                            name="card-sharp"
+                            size="large"
+                        ></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+
+                <ion-col class="colBotonFab">
+                    <ion-fab-button
+                        class="botonFab"
+                        style="--background: #1D4672"
+                    >
+                        <ion-icon
+                            name="newspaper-sharp"
+                            size="large"
+                        ></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="colLabel">
+                    <ion-label>
+                        Personalizar
+
+                        <br>
+                        mi tarjeta
+                    </ion-label>
+                </ion-col>
+
+                <ion-col class="colLabel">
+                    <ion-label>Noticias</ion-label>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+
+    <div class="mostrarOpciones">
+        <ion-item
+            button="true"
+            style="--background: transparent;"
+            lines="none"
+            (click)="despliegaLista()"
+        >
+            <ion-icon
+                #icono
+                name="chevron-down-sharp"
+                size="large"
+                style="color: white;"
+            ></ion-icon>
+        </ion-item>
+    </div>
+
+    <ion-card>
+        <ion-card-header>
+            <h4>Cuentas en pesos</h4>
+        </ion-card-header>
+
+    <ion-list
+        *ngFor="let item of datosTarjetas"
+        >
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="4">
+                            <h2>Cuenta</h2>
+                        </ion-col>
+
+                        <ion-col>
+                            <p>$ {{ item.saldo }}</p>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            <h2>{{ item.idTarjeta }}</h2>
+                        </ion-col>
+
+                        <ion-col>
+                            <p>Saldo disponible</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-list>
+    </ion-card>
+
+    <br>
 </ion-content>
