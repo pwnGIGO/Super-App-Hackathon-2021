@@ -14,7 +14,7 @@ export class MenuPrincipalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/elementos-menu.json').subscribe(
+    this.http.obtenerJSONlocal('elementos-menu.json').subscribe(
       (res) => {
         this.elementos = res;
       }
