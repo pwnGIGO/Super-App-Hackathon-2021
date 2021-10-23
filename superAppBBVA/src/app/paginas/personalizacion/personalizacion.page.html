@@ -1,7 +1,8 @@
 <app-cabecera titulo="Personaliza tu tarjeta"></app-cabecera>
 
 <ion-content>
-
+  <ion-searchbar placeholder="Buscar imagen" (ionInput)="buscar($event)" style="width: 95%"></ion-searchbar>
+  
   <ion-slides pager="true">
     <ion-slide *ngFor="let slide of slides">
       <ion-card mode="ios">
