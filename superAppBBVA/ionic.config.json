@@ -1,7 +1,8 @@
 {
   "name": "superAppBBVA",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
