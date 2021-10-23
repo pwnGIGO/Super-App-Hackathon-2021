@@ -12,7 +12,7 @@
         "nombre": "Premium",
         "numeroTrajeta": "1111-2222-3333-1084",
         "idTarjeta": "1084",
-        "saldo": 10.0,
+        "saldo": "10,000000.00",
         "fechaExp": "22/10/21",
         "tipo": "Visa"
       },
@@ -21,7 +21,7 @@
         "nombre": "Basica",
         "numeroTrajeta": "1111-2222-3333-1234",
         "idTarjeta": "1234",
-        "saldo": 10.0,
+        "saldo": "29,800.45",
         "fechaExp": "22/10/21",
         "tipo": "MasterCard"
       },
@@ -30,7 +30,7 @@
         "nombre": "Platinum",
         "numeroTrajeta": "1111-2222-3333-0987",
         "idTarjeta": "0987",
-        "saldo": 10.0,
+        "saldo": "0.00",
         "fechaExp": "22/10/21",
         "tipo": "Visa"
       }

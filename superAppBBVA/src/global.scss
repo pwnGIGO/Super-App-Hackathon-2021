@@ -131,14 +131,46 @@ Fondos
   align-items: center;
 }
 
-.listaCuentas {
-  background: transparent;
-  padding: 0;
-}
-
 .tarjetaCuentas {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.cuentaPesos {
+    font-size: 1.4em;
+    font-family: Beton-sans-light;
+    font-weight: bolder !important;
+    color: CMYK 40/20/10/100;
+}
+
+.cuentaTag {
+    font-family: Beton-sans-light;
+    font-size: 1.5em !important;
+    font-weight: bolder !important;
+    color: #043263;
+}
+
+.cuenta {
+    font-family: Beton-sans-light;
+    font-size: 1.3em !important;
+    font-weight: bolder !important;
+    color: black;
+}
+
+.saldoTag {
+    font-family: Beton-sans-light;
+    font-size: 1.3em !important;
+    font-weight: bolder !important;
+    color: CMYK 40/30/20/66;
+}
+
+.saldo {
+    font-family: Beton-sans-light;
+    font-size: 1.7em !important;
+    font-weight: bolder !important;
+    color: black;
+}
+
+
