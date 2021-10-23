@@ -49,6 +49,11 @@ Fondos
   src: url("assets/fuentes/Benton-Sans/bentonsansmedium/BentonSans Medium.otf");
 }
 
+@font-face {
+  font-family: Beton-sans-book;
+  src: url("assets/fuentes/Benton-Sans/bentonsansbook/BentonSans Book.otf");
+}
+
 .cabecera {
   // padding-right: 48px;
   height: 5em;
@@ -56,6 +61,11 @@ Fondos
   --background: #072146;
   color: white;
   font-family: Beton-sans-light;
+}
+
+.cabeceraLogin {
+  --padding-top: 2em;
+  height: 7em;
 }
 
 /* **************************
@@ -79,7 +89,7 @@ Fondos
 }
 
 .iconoMenu {
-  color: white;
+  color: #043263;
 }
 
 /* **************************
@@ -139,38 +149,60 @@ Fondos
 }
 
 .cuentaPesos {
-    font-size: 1.4em;
-    font-family: Beton-sans-light;
-    font-weight: bolder !important;
-    color: CMYK 40/20/10/100;
+  font-size: 1.4em;
+  font-family: Beton-sans-light;
+  font-weight: bolder !important;
+  color: CMYK 40/20/10/100;
 }
 
 .cuentaTag {
-    font-family: Beton-sans-light;
-    font-size: 1.5em !important;
-    font-weight: bolder !important;
-    color: #043263;
+  font-family: Beton-sans-light;
+  font-size: 1.5em !important;
+  font-weight: bolder !important;
+  color: #043263;
 }
 
 .cuenta {
-    font-family: Beton-sans-light;
-    font-size: 1.3em !important;
-    font-weight: bolder !important;
-    color: black;
+  font-family: Beton-sans-light;
+  font-size: 1.3em !important;
+  font-weight: bolder !important;
+  color: black;
 }
 
 .saldoTag {
-    font-family: Beton-sans-light;
-    font-size: 1.3em !important;
-    font-weight: bolder !important;
-    color: CMYK 40/30/20/66;
+  font-family: Beton-sans-light;
+  font-size: 1.3em !important;
+  font-weight: bolder !important;
+  color: CMYK 40/30/20/66;
 }
 
 .saldo {
-    font-family: Beton-sans-light;
-    font-size: 1.7em !important;
-    font-weight: bolder !important;
-    color: black;
+  font-family: Beton-sans-light;
+  font-size: 1.7em !important;
+  font-weight: bolder !important;
+  color: black;
 }
 
+.logoFondo {
+  height: 45%;
+  // padding-top: 3em;
+  background-image: url("../src/assets/imagenes/fondoLogin_1.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 26em;
+  // display: flex;
+  // justify-content: center;
+  // align-items: flex-start;
+}
 
+.itemlogoBBVA {
+    --background: transparent !important;
+    padding-top: 3em;
+    padding-left: 64px;
+}
+
+.logoBBVA {
+    display: block;
+    margin: auto;
+    width: 5em;
+}

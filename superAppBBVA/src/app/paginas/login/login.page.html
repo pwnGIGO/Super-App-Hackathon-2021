@@ -1,28 +1,94 @@
-<app-cabecera titulo="BBVA"></app-cabecera>
+<!-- <ion-content class="blueCore"></ion-content>
+
+<ion-header class="ion-no-border">
+    <ion-toolbar
+        mode="md"
+        class="cabeceraLogin blueCore"
+    >
+        <div class="itemLogo">
+            <img src="/assets/imagenes/logo.png" class="imgLogo">
+        </div>
+        
+        <ion-buttons
+        slot="end"
+        style="height: 5em;"
+        >
+            <ion-menu-button menu="menuPrincipal">
+                <ion-icon
+                class="iconoMenu"
+                    name="menu"
+                    size="large"
+                ></ion-icon>
+            </ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header> -->
 
 <ion-content>
+    <div class="logoFondo">
+        <ion-item
+            class="itemlogoBBVA"
+            lines="none"
+        >
+        <ion-img class="logoBBVA" src="\assets\imagenes\bbva-2.svg"></ion-img>
+            <ion-buttons slot="end">
+                <ion-menu-button menu="menuPrincipal">
+                    <ion-icon
+                        class="iconoMenu"
+                        name="menu"
+                        size="large"
+                    ></ion-icon>
+                </ion-menu-button>
+            </ion-buttons>
+        </ion-item>
+    </div>
+</ion-content>
 
-    <h1 class="title" align="center">Hola</h1>
-    <h6 class="title" align="center">Rodrigo</h6>
-    <h5 class="title" align="center">Cambiar de usuario</h5>
+<!-- <ion-content>
+    <h1
+        class="title"
+        align="center"
+    >Hola</h1>
 
+    <h6
+        class="title"
+        align="center"
+    >Rodrigo</h6>
+
+    <h5
+        class="title"
+        align="center"
+    >Cambiar de usuario</h5>
 
     <ion-item lines="full">
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" #passwordEyeRegister (ionChange)="guardaValores($event)" required>
-        </ion-input>
-    </ion-item>
 
+        <ion-input
+            type="password"
+            #passwordEyeRegister
+            (ionChange)="guardaValores($event)"
+            required="required"
+        ></ion-input>
+    </ion-item>
 
     <ion-row>
         <ion-col>
-            <a [routerLink]="['/forgot-password']" class="small-text">Olvidé mi contraseña</a>
-            <ion-button mode="ios" expand="block" (click)="enviaDatos()" >Entrar</ion-button>
+            <a
+                [routerLink]="['/forgot-password']"
+                class="small-text"
+            >Olvidé mi contraseña</a>
+
+            <ion-button
+                mode="ios"
+                expand="block"
+                (click)="enviaDatos()"
+            >Entrar</ion-button>
         </ion-col>
     </ion-row>
 
     <ion-card>
         <ion-icon name="shield-sharp"></ion-icon>
+
         <ion-card-header>
             <ion-card-title>Token Móvil</ion-card-title>
         </ion-card-header>
@@ -30,9 +96,9 @@
 
     <ion-card>
         <ion-icon name="qr-code-sharp"></ion-icon>
+
         <ion-card-header>
             <ion-card-title>Operación QR + CoDi</ion-card-title>
         </ion-card-header>
     </ion-card>
-
-</ion-content>
+</ion-content> -->
