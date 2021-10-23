@@ -26,6 +26,17 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* **************************
+Fondos
+************************** */
+.ion-page {
+  background: #004481;
+}
+
+.blueCore {
+  --background: #004481;
+}
+
+/* **************************
     Estilos de la cabecera
 ************************** */
 @font-face {
@@ -72,6 +83,18 @@
 }
 
 /* **************************
+    Estilos página de operaciones
+************************** */
+.cabeceraOperaciones {
+  // padding-left: 100px;
+  height: 5em;
+  text-align: center;
+  --background: #004481;
+  color: white;
+  font-family: Beton-sans-light;
+}
+
+/* **************************
     Varios
 ************************** */
 .colBotonFab {
@@ -81,15 +104,41 @@
   align-items: center;
 }
 
-.colLabel{  
-  position: fixed;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 0px;
+.colLabel {
+  color: white;
+  text-align: center;
+  margin: 0%;
+  padding: 0%;
+  font-size: 0.8em;
 }
 
 .botonFab {
   width: 7em;
   height: 7em;
+}
+
+.colapsar {
+  transition: 0.7s ease-in-out;
+  transition-delay: 0s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.mostrarOpciones {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listaCuentas {
+  background: transparent;
+  padding: 0;
+}
+
+.tarjetaCuentas {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
