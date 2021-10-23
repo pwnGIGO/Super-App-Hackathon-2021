@@ -34,8 +34,44 @@ export class NoticiasPage implements OnInit {
   }
   ]
 
-  clima = {}
-  gasolina = {}
+  clima = {
+      "_id": "5952983359954a0adbf7ab09",
+      "cityid": "MXAS0002",
+      "validdateutc": "20170627T140000Z",
+      "winddirectioncardinal": "SSE",
+      "probabilityofprecip": "40",
+      "relativehumidity": "90",
+      "name": "Aguascalientes",
+      "date-insert": "2017-06-27T17:36:43.084Z",
+      "longitude": "-102.296",
+      "state": "Aguascalientes",
+      "lastreporttime": "20170627T092449Z",
+      "skydescriptionlong": "Tormentas dispersas",
+      "stateabbr": "AGU",
+      "tempc": "17",
+      "latitude": "21.87982",
+      "iconcode": "96",
+      "windspeedkm": "6"
+    };
+
+  gasolina =  {
+      "_id": "587fbd68edfe99480a072f14",
+      "calle": "Av. Adolfo López Mateos No. 1604  Col. Melchor Ocampo  Juárez",
+      "rfc": "DGA930823KD3",
+      "date_insert": "2017-01-18T19:09:26.784Z",
+      "regular": "15.71",
+      "colonia": "",
+      "numeropermiso": "PL/760/EXP/ES/2015",
+      "fechaaplicacion": "",
+      "﻿permisoid": "2041",
+      "longitude": "-106.4514",
+      "latitude": "31.71947",
+      "premium": "17.93",
+      "razonsocial": "DÍAZ GAS  S.A. DE C.V.",
+      "codigopostal": "32380",
+      "dieasel": ""
+    };
+
   aire = {
     "_id": "58c780bf281e87010078f48d",
     "stations": [
