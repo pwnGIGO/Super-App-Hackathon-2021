@@ -121,6 +121,8 @@
 
                 <ion-col class="colBotonFab">
                     <ion-fab-button
+                    
+                    (click)="navega(1)"
                         class="botonFab"
                         style="--background:#1D4672"
                     >
@@ -159,6 +161,7 @@
             <ion-row>
                 <ion-col class="colBotonFab">
                     <ion-fab-button
+                    (click)="navega(2)"
                         class="botonFab"
                         style="--background: #1D4672"
                     >
@@ -171,6 +174,20 @@
 
                 <ion-col class="colBotonFab">
                     <ion-fab-button
+                    (click)="navega(3)"
+                        class="botonFab"
+                        style="--background: #1D4672"
+                    >
+                        <ion-icon
+                            name="newspaper-sharp"
+                            size="large"
+                        ></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+
+                <ion-col class="colBotonFab">
+                    <ion-fab-button
+                        (click)="navega(4)"
                         class="botonFab"
                         style="--background: #1D4672"
                     >
@@ -194,6 +211,10 @@
 
                 <ion-col class="colLabel">
                     <ion-label>Noticias</ion-label>
+                </ion-col>
+
+                <ion-col class="colLabel">
+                    <ion-label>Mapa</ion-label>
                 </ion-col>
             </ion-row>
         </div>

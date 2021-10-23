@@ -10,21 +10,13 @@ export class MapaPage implements OnInit {
 
   constructor(private http: HttpService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   gas: any;
 
   buscar($event){
-
     if($event.target.value == "gasolina"){
       console.log("Busca gasolina");
-      this.http.obtenerJSONremoto('https://api.datos.gob.mx/v1/precio.gasolina.publico').subscribe(
-        (res) => {
-          console.log(res["results"]);
-          this.gas = res["results"];
-        }
-      );
     }
   }
 }

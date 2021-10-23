@@ -80,28 +80,9 @@ export class MapaComponent implements OnInit {
      .then((res) => res.json())
      .then((data) => {
        data.results.forEach((value) => {
-         console.log(value);
          // recorre todos los cuestionarios
          try {
-           this.geojsonlayer = geoJson(value, {
-             // muestra el icono en el mapa
-             onEachFeature: (feature, layer) => {
-               layer.bindPopup('Posible contagio ');
-               //layer.setIcon(iconn);
-             },
-           }).addTo(this.map);
-
-           this.geojsonlayer = geoJson(value, {
-             // muestra el circulo en el mapa
-             pointToLayer: (feature, latlng) => 
-             circle(latlng, 200, {
-               color: '#ffa333',
-               fillColor: '#ffc073',
-               fillOpacity: 0.5,
-               radious: 2000,
-             }),
-           }).addTo(this.map);
-           
+           L.marker([value.latitude, value.longitude]).addTo(this.map).bindPopup('Gasolina').openPopup(); 
          } catch (error) {
            //console.log("Hubo un error al cargar los marcadores")
          }
