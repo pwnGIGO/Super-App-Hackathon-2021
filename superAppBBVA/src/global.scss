@@ -25,6 +25,8 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+
+
 /* **************************
 Fondos
 ************************** */
@@ -49,6 +51,11 @@ Fondos
   src: url("assets/fuentes/Benton-Sans/bentonsansmedium/BentonSans Medium.otf");
 }
 
+@font-face {
+  font-family: Beton-sans-book;
+  src: url("assets/fuentes/Benton-Sans/bentonsansbook/BentonSans Book.otf");
+}
+
 .cabecera {
   // padding-right: 48px;
   height: 5em;
@@ -56,6 +63,11 @@ Fondos
   --background: #072146;
   color: white;
   font-family: Beton-sans-light;
+}
+
+.cabeceraLogin {
+  --padding-top: 2em;
+  height: 7em;
 }
 
 /* **************************
@@ -139,38 +151,111 @@ Fondos
 }
 
 .cuentaPesos {
-    font-size: 1.4em;
-    font-family: Beton-sans-light;
-    font-weight: bolder !important;
-    color: CMYK 40/20/10/100;
+  font-size: 1.4em;
+  font-family: Beton-sans-light;
+  font-weight: bolder !important;
+  color: CMYK 40/20/10/100;
 }
 
 .cuentaTag {
-    font-family: Beton-sans-light;
-    font-size: 1.5em !important;
-    font-weight: bolder !important;
-    color: #043263;
+  font-family: Beton-sans-light;
+  font-size: 1.5em !important;
+  font-weight: bolder !important;
+  color: #043263;
 }
 
 .cuenta {
-    font-family: Beton-sans-light;
-    font-size: 1.3em !important;
-    font-weight: bolder !important;
-    color: black;
+  font-family: Beton-sans-light;
+  font-size: 1.3em !important;
+  font-weight: bolder !important;
+  color: black;
 }
 
 .saldoTag {
-    font-family: Beton-sans-light;
-    font-size: 1.3em !important;
-    font-weight: bolder !important;
-    color: CMYK 40/30/20/66;
+  font-family: Beton-sans-light;
+  font-size: 1.3em !important;
+  font-weight: bolder !important;
+  color: CMYK 40/30/20/66;
 }
 
 .saldo {
-    font-family: Beton-sans-light;
-    font-size: 1.7em !important;
-    font-weight: bolder !important;
-    color: black;
+  font-family: Beton-sans-light;
+  font-size: 1.7em !important;
+  font-weight: bolder !important;
+  color: black;
 }
 
+.cabeceraLogin {
+  padding-bottom: 7em;
+  padding-left: 48px;
+  height: 5em;
+  --background: transparent;
+  color: white;
+}
 
+.logoCabecera {
+  display: block;
+  width: 5em;
+  margin: auto;
+}
+
+.divLogin {
+  background: transparent;
+  height: 90%;
+  padding: 13em 3em;
+  transition: all .3s ease-in-out;
+}
+
+.itemLogin {
+  --background: transparent;
+  border-bottom: solid 1px white;
+}
+
+.labelLogin {
+  color: white !important;
+  font-family: Beton-sans-light;
+}
+
+.iconLogin {
+  color: white;
+}
+
+.inputLogin {
+  --color: white !important;
+  font-family: Beton-sans-light;
+}
+
+.colLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.aLogin {
+  font-family: Beton-sans-medium;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.btonLogin {
+  width: 12em;
+  height: 4em;
+  font-family: Beton-sans-medium;
+  color: white;
+  border: none;
+  --background: #1464A5;
+  --box-shadow: none;
+}
+
+.divBotonLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogin {
+  text-align: center;
+  color: white;
+  --background: transparent;
+}
