@@ -13,30 +13,15 @@
             [routerLink]="item.path"
           >
             <ion-icon
-            class="iconoMenu"
+              class="iconoMenu"
               slot="start"
               [name]="item.icono"
             ></ion-icon>
 
-            <label class="ion-text-wrap">{{ item.elemento }}</label>
+            <label class="labelMenu ion-text-wrap">{{ item.elemento }}</label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
-
-      <!-- <ion-list>
-        <ion-menu-toggle *ngFor="let item of elementos">
-          <ion-item class="itemMenu"
-            [routerLink]="item.path"
-          >
-            <ion-icon
-              slot="start"
-              [name]="item.icono"
-            ></ion-icon>
-  
-            <label class="ion-text-wrap">{{ item.elemento }}</label>
-          </ion-item>
-        </ion-menu-toggle>
-      </ion-list> -->
     </div>
   </ion-content>
 </ion-menu>
