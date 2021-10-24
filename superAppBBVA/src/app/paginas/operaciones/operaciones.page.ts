@@ -79,8 +79,8 @@ export class OperacionesPage implements OnInit {
       case 1: //Contactos
         this.navCtrl.navigateForward('/contactos');
         break;
-      case 2: //Personalizar
-        this.navCtrl.navigateForward('/personalizacion');
+      case 2: // Tarjeta de transporte
+        this.navCtrl.navigateForward('/transporte-bbva');
         break;
       case 3: //Noticias
         this.navCtrl.navigateForward('/noticias');
