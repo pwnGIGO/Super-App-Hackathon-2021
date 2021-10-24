@@ -35,9 +35,11 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
-  }
-
-
+  },
+  {
+    path: 'test-financiero',
+    loadChildren: () => import('./test-financiero/test-financiero.module').then( m => m.TestFinancieroPageModule)
+  },
 ];
 
 @NgModule({

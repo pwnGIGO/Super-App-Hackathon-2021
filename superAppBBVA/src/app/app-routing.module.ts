@@ -38,6 +38,34 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./paginas/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'test-financiero',
+    loadChildren: () => import('./paginas/test-financiero/test-financiero.module').then( m => m.TestFinancieroPageModule)
+  },
+  {
+    path: 'pregunta1',
+    loadChildren: () => import('./paginas/test-financiero/pregunta1/pregunta1.module').then( m => m.Pregunta1PageModule)
+  },
+  {
+    path: 'pregunta2',
+    loadChildren: () => import('./paginas/test-financiero/pregunta2/pregunta2.module').then( m => m.Pregunta2PageModule)
+  },
+  {
+    path: 'pregunta3',
+    loadChildren: () => import('./paginas/test-financiero/pregunta3/pregunta3.module').then( m => m.Pregunta3PageModule)
+  },
+  {
+    path: 'pregunta4',
+    loadChildren: () => import('./paginas/test-financiero/pregunta4/pregunta4.module').then( m => m.Pregunta4PageModule)
+  },
+  {
+    path: 'pregunta5',
+    loadChildren: () => import('./paginas/test-financiero/pregunta5/pregunta5.module').then( m => m.Pregunta5PageModule)
+  },
+  {
+    path: 'pregunta6',
+    loadChildren: () => import('./paginas/test-financiero/pregunta6/pregunta6.module').then( m => m.Pregunta6PageModule)
   }
 ];
 

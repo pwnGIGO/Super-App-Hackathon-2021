@@ -1,0 +1,30 @@
+[
+    {
+        "nombreCuestionario": "Pregunta 2 de 6"
+    },
+    {
+      "pregunta": [
+        {
+          "tipoPregunta": 3,
+          "textoPregunta": "¿Cada cuánto tiempo puede obtener un reporte de crédito gratis?",
+          "valorPregunta": "Una vez al año"
+        },
+        {
+          "etiqueta": "Depende de cuántos sitios de puntaje de crédito encuentre y que sean gratis",
+          "valor": "opcion 1"
+        },
+        {
+          "etiqueta": "Una vez cada seis meses",
+          "valor": "opcion 2"
+        },
+        {
+          "etiqueta": "Una vez al año",
+          "valor": "opcion 3"
+        },
+        {
+          "etiqueta": "Nunca, siempre debe pagar para obtener el reporte de crédito correcto",
+          "valor": "opcion 4"
+        }
+      ]
+    }
+  ]
