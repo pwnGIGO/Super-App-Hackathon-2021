@@ -9,7 +9,7 @@ import { HttpService } from '../../servicios/http.service';
 })
 export class NoticiasPage implements OnInit {
 
-  noticias =[
+  noticias;/*[
   {
     id: 1,
     imagen: "bbva.svg",
@@ -33,7 +33,7 @@ export class NoticiasPage implements OnInit {
     imagen2: "card2.jpg"
   }
   ]
-
+*/
   clima = {
       "_id": "5952983359954a0adbf7ab09",
       "cityid": "MXAS0002",
@@ -52,7 +52,7 @@ export class NoticiasPage implements OnInit {
       "latitude": "21.87982",
       "iconcode": "96",
       "windspeedkm": "6"
-    };
+    }
 
   gasolina =  {
       "_id": "587fbd68edfe99480a072f14",
@@ -104,7 +104,13 @@ export class NoticiasPage implements OnInit {
   constructor(private navCtrl: NavController, private http: HttpService) {}
 
   ngOnInit() {
-    //https://api.datos.gob.mx/v2/condiciones-atmosfericas
+    this.http.obtenerJSONremoto('https://new-api-java.herokuapp.com/news').subscribe(
+      (res) => {
+        console.log(res);
+        this.noticias = res;
+      }
+      );
+
     this.http.obtenerJSONremoto('https://api.datos.gob.mx/v2/condiciones-atmosfericas').subscribe(
       (res) => {
         let aleatorio = Math.floor(Math.random()*99);

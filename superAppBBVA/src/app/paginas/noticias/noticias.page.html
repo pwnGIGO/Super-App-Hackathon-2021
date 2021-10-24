@@ -48,35 +48,33 @@
   <ion-card *ngFor="let noticia of noticias">
     <ion-item>
       <ion-avatar slot="start">
-        <img src="assets/card/{{noticia.imagen}}">
+        <img src="{{ noticia.url_img }}">
       </ion-avatar>
       <ion-label>
-        <h3>{{ noticia.autor }}</h3>
-        <p>{{ noticia.fecha }}</p>
+        <h3>{{ noticia.title }}</h3>
+        <p>{{ noticia.date }}</p>
       </ion-label>
     </ion-item>
 
-    <img src="assets/card/{{noticia.imagen2}}" (click)="abrirNoticia(noticia.id)">
+    <img src="{{ noticia.url_img }}" (click)="abrirNoticia(noticia.id)">
     <ion-card-header>
-      <ion-card-title>{{ noticia.nota }}</ion-card-title>
+      <ion-card-title>{{ noticia.description }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      {{ noticia.contenido }}
+      {{ noticia.description }}
     </ion-card-content>
 
     <ion-footer>
       <ion-row>
         <ion-col center text-center>
-          <button>
-            <ion-icon name="thumbs-up"></ion-icon>
-            <div>{{ noticia.likes }}</div>
-          </button>
+          
+            <div>{{ noticia.name }}</div>
+          
         </ion-col>
         <ion-col center text-center>
-          <button>
-            <ion-icon name="text"></ion-icon>
-            <div>{{ noticia.comentarios }}</div>
-          </button>
+          
+            <div>Autor: {{ noticia.author }}</div>
+          
         </ion-col>
       </ion-row>
     </ion-footer>
