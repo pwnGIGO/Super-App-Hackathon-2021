@@ -1,16 +1,62 @@
 <app-cabecera titulo="Personaliza tu tarjeta"></app-cabecera>
 
 <ion-content>
-  <ion-searchbar placeholder="Buscar imagen" (ionInput)="buscar($event)" style="width: 95%"></ion-searchbar>
-  
+
+  <div class="contenedorGral">
+    <ion-list *ngFor="let item of categorias">
+      <ion-item>
+        <ion-thumbnail></ion-thumbnail>
+        <ion-label>{{ item.categoria }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+
+
+  <!-- <div
+    class="contenedorGral"
+    style="color: #072146;"
+  >
+    <p>
+      Selecciona la categoria que más te guste
+    </p>
+  </div>
+
+  <ion-slides
+    class="slideCategorias"
+    pager="true"
+  >
+    <ion-slide *ngFor="let item of categorias">
+      <div
+        style="width: 100%; margin: 1.5em;"
+        button="true"
+      >
+    Hola</div>
+    </ion-slide>
+  </ion-slides> -->
+
+  <br>
+</ion-content>
+
+<!-- <ion-content>
+  <ion-searchbar
+    placeholder="Buscar imagen"
+    (ionInput)="buscar($event)"
+    style="width: 95%"
+  ></ion-searchbar>
+
   <ion-slides pager="true">
     <ion-slide *ngFor="let slide of slides">
       <ion-card mode="ios">
         <img [src]="slide.img">
       </ion-card>
-    </ion-slide>    
+    </ion-slide>
   </ion-slides>
 
-  <ion-button mode="ios" expand="block" (click)="enviaSolicitud()">Solicitar</ion-button>
-
-</ion-content>
+  <ion-button
+    mode="ios"
+    expand="block"
+    (click)="enviaSolicitud()"
+  >Solicitar</ion-button>
+</ion-content> -->
