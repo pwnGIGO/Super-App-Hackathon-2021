@@ -1,21 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar
+    mode="md"
+    class="cabeceraGaleria"
+  >
+    <ion-title class="ion-text-wrap">Galeria de imágenes</ion-title>
+
+    <ion-buttons
+      slot="end"
+      style="height: 5em;"
+    >
+      <ion-button (click)="cerrar()">
+        <ion-icon
+          name="close-sharp"
+          size="large"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <!-- <ion-list *ngFor="let item of listaImagenes">
-    <ion-item>
-      <img [src]="item">
-    </ion-item>
-  </ion-list> -->
+  <div
+    class="contenedorGral"
+    style="color: #072146;"
+  >
+    <p>
+      Desliza y luego toca una imagen para seleccionarla.
+    </p>
+  </div>
 
   <ion-slides
-    class="slideCategorias"
+    class="slideGaleria"
     pager="true"
   >
-    <ion-slide *ngFor="let item of listaImagenes">
-      <div
-        style="width: 100%; margin: 1.5em;"
+    <ion-slide *ngFor="let item of listaImagenes; let i=index">
+      <ion-item
         button="true"
+        lines="none"
       >
         <img [src]="item">
-      </div>
+      </ion-item>
     </ion-slide>
   </ion-slides>
+
+  <div class="divBotonGaleria">
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+    >Enviar selección</ion-button>
+  </div>
 </ion-content>

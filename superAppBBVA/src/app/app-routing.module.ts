@@ -78,7 +78,11 @@ const routes: Routes = [
   {
     path: 'pregunta6',
     loadChildren: () => import('./paginas/test-financiero/pregunta6/pregunta6.module').then( m => m.Pregunta6PageModule)
-  }
+  },
+  {
+    path: 'datos-tarjeta',
+    loadChildren: () => import('./paginas/datos-tarjeta/datos-tarjeta.module').then( m => m.DatosTarjetaPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-galeria',
@@ -10,8 +11,11 @@ export class GaleriaComponent implements OnInit {
   @Input() grupo;
 
   listaImagenes = [];
+  listaNombres = [];
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
   ngOnInit() {
     const tam1 = Object.keys(this.imagenes).length;
@@ -21,7 +25,16 @@ export class GaleriaComponent implements OnInit {
         this.listaImagenes.push(
           this.imagenes[i].url
         );
+
+        this.listaNombres.push(
+          this.imagenes[i].nombre
+        );
       }
     }
   }
+
+  cerrar() {
+    this.modalCtrl.dismiss();
+  }
+
 }

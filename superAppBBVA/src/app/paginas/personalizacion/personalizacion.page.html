@@ -6,13 +6,14 @@
     style="color: #072146;"
   >
     <p>
-      Selecciona la categoria que más te guste
+      Selecciona la categoría que más te guste.
     </p>
   </div>
 
   <div class="contenedorGral">
     <ion-list *ngFor="let item of categorias">
       <ion-item
+        mode="md"
         button="true"
         (click)="muestraGaleria(item.valor)"
       >
@@ -39,31 +40,27 @@
     style="color: #072146;"
   >
     <p>
-      Si prefieres, puedes cargar una imagen de tu galeria de imagenes.
+      Si prefieres, puedes cargar una imágen de tu propia galeria.
     </p>
+  </div>
+
+  <div class="divBotonGaleria">
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+    >Explorar mi galería</ion-button>
+  </div>
+
+  <div
+    class="divBotonGaleria"
+    style="padding-top: 0; padding-bottom: 0;"
+  >
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+      (click)="enviaSolicitud()"
+    >Finalizar</ion-button>
   </div>
 
   <br>
 </ion-content>
-
-<!-- <ion-content>
-  <ion-searchbar
-    placeholder="Buscar imagen"
-    (ionInput)="buscar($event)"
-    style="width: 95%"
-  ></ion-searchbar>
-
-  <ion-slides pager="true">
-    <ion-slide *ngFor="let slide of slides">
-      <ion-card mode="ios">
-        <img [src]="slide.img">
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
-
-  <ion-button
-    mode="ios"
-    expand="block"
-    (click)="enviaSolicitud()"
-  >Solicitar</ion-button>
-</ion-content> -->

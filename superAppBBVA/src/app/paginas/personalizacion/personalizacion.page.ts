@@ -42,6 +42,7 @@ export class PersonalizacionPage implements OnInit {
   }
 
   async muestraGaleria(categoria) {
+    console.log(this.imagenes);
     console.log(categoria);
     const modal = await this.modalCtrl.create({
       component: GaleriaComponent,
@@ -58,12 +59,8 @@ export class PersonalizacionPage implements OnInit {
   }
 
   enviaSolicitud() {
-    this.confirmaEnvio();
-    this.navCtrl.navigateForward('/operaciones');
-  }
-
-  buscar($event) {
-    //console.log($event.target.value);
+    // this.confirmaEnvio();
+    this.navCtrl.navigateForward('/datos-tarjeta');
   }
 
   async confirmaEnvio() {
@@ -71,7 +68,7 @@ export class PersonalizacionPage implements OnInit {
       cssClass: 'alertEnvioExitoso',
       backdropDismiss: false,
       header: '¡Solicitud exitosa!',
-      message: 'Revisaremos tu solicitud y te notificaremos',
+      message: 'Revisaremos tu solicitud y te notificaremos si fue aceptada tu imagen.',
       buttons: [
         {
           text: 'Cerrar',
