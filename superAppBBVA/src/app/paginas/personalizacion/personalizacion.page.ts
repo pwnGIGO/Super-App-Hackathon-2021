@@ -21,7 +21,7 @@ export class PersonalizacionPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/galeria.json').subscribe(
+    this.http.obtenerJSONlocal('galeria.json').subscribe(
       (res) => {
         const tam1 = Object.keys(res).length;
         const tam2 = Object.keys(res[0].galeria).length;

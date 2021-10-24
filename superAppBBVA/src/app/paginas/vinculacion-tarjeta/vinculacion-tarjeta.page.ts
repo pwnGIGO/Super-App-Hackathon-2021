@@ -19,7 +19,7 @@ export class VinculacionTarjetaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/usuarios.json').subscribe(
+    this.http.obtenerJSONlocal('usuarios.json').subscribe(
       (res) => {
         this.datosUsuario = res[0];
         this.datosTarjetas = res[1].tarjetas;
