@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, NavController } from '@ionic/angular';
+import { HttpService } from '../../servicios/http.service';
 
 @Component({
   selector: 'app-personalizacion',
@@ -7,68 +8,46 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./personalizacion.page.scss'],
 })
 export class PersonalizacionPage implements OnInit {
+  imagenes = [];
+  categorias = [];
 
-  slides: {img:string, titulo:string, desc:string}[] =[
-  {
-    img:'assets/tarjetas/tarjeta1.png',
-    titulo: 'slide 1',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta2.png',
-    titulo: 'slide 2',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta3.png',
-    titulo: 'slide 3',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta4.png',
-    titulo: 'slide 4',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta5.png',
-    titulo: 'slide 4',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta6.png',
-    titulo: 'slide 4',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta7.png',
-    titulo: 'slide 4',
-    desc: ''
-  },
-  {
-    img:'assets/tarjetas/tarjeta8.png',
-    titulo: 'slide 4',
-    desc: ''
-  }
-  ];
-
-
-  constructor(private alertCtrl: AlertController, private navCtrl: NavController) { }
-
-  usuario: {
-    id: 1,
-    //tipoCliente: "Nuevo"
-    tipoCliente: "Viejo"
-  }
+  constructor(
+    private alertCtrl: AlertController,
+    private navCtrl: NavController,
+    private http: HttpService
+  ) { }
 
   ngOnInit() {
+    this.http.obtenerJSONlocal('/galeria.json').subscribe(
+      (res) => {
+        const tam1 = Object.keys(res).length;
+        const tam2 = Object.keys(res[0].galeria).length;
+        
+        for (let i = 0; i < tam1; i++) {
+          this.categorias.push(
+            res[i].galeria[0]
+          );
+
+          for (let j = 1; j < tam2; j++) {
+            this.imagenes.push(
+              res[i].galeria[j]
+            );
+          }
+        }
+
+        console.log(this.categorias);
+        console.log(this.imagenes);
+
+      }
+    );
   }
 
-  enviaSolicitud(){
+  enviaSolicitud() {
     this.confirmaEnvio();
     this.navCtrl.navigateForward('/operaciones');
   }
 
-  buscar($event){
+  buscar($event) {
     //console.log($event.target.value);
   }
 
@@ -79,10 +58,10 @@ export class PersonalizacionPage implements OnInit {
       header: '¡Solicitud exitosa!',
       message: 'Revisaremos tu solicitud y te notificaremos',
       buttons: [
-      {
-        text: 'Cerrar',
-        role: 'cancel',
-      },
+        {
+          text: 'Cerrar',
+          role: 'cancel',
+        },
       ],
     });
     await alertEnvio.present();
