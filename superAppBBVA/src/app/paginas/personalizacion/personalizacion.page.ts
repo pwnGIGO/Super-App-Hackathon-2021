@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, ModalController, NavController } from '@ionic/angular';
+import { GaleriaComponent } from 'src/app/componentes/galeria/galeria.component';
 import { HttpService } from '../../servicios/http.service';
 
 @Component({
@@ -10,15 +11,17 @@ import { HttpService } from '../../servicios/http.service';
 export class PersonalizacionPage implements OnInit {
   imagenes = [];
   categorias = [];
+  imagen;
 
   constructor(
     private alertCtrl: AlertController,
     private navCtrl: NavController,
-    private http: HttpService
+    private http: HttpService,
+    private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/galeria.json').subscribe(
+    this.http.obtenerJSONlocal('galeria.json').subscribe(
       (res) => {
         const tam1 = Object.keys(res).length;
         const tam2 = Object.keys(res[0].galeria).length;
@@ -34,12 +37,24 @@ export class PersonalizacionPage implements OnInit {
             );
           }
         }
-
-        console.log(this.categorias);
-        console.log(this.imagenes);
-
       }
     );
+  }
+
+  async muestraGaleria(categoria) {
+    console.log(categoria);
+    const modal = await this.modalCtrl.create({
+      component: GaleriaComponent,
+      backdropDismiss: false,
+      componentProps: {
+        grupo: categoria,
+        imagenes: this.imagenes
+      },
+    });
+    await modal.present();
+
+    const { data } = await modal.onDidDismiss();
+    this.imagen = data;
   }
 
   enviaSolicitud() {

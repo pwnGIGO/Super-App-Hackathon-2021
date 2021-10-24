@@ -16,7 +16,7 @@ export class TransporteBBVAPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/imagenes-info.json').subscribe(
+    this.http.obtenerJSONlocal('imagenes-info.json').subscribe(
       (res) => {
         this.imagenes = res;
       }

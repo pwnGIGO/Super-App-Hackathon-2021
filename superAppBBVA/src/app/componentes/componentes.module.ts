@@ -7,13 +7,15 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 @NgModule({
   declarations: [
     CabeceraComponent,
     MenuPrincipalComponent,
     MapaComponent,
-    RadioGroupComponent
+    RadioGroupComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { RadioGroupComponent } from './radio-group/radio-group.component';
     CabeceraComponent,
     MenuPrincipalComponent,
     MapaComponent,
-    RadioGroupComponent
+    RadioGroupComponent,
+    GaleriaComponent
   ]
 })
 export class ComponentesModule { }
