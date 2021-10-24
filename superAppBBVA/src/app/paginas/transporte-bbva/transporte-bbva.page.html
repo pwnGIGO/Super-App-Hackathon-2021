@@ -1,0 +1,34 @@
+<app-cabecera titulo="Transport Card"></app-cabecera>
+
+<ion-content class="drarkblue">
+  <ion-slides
+    class="slidesContenedor"
+    pager="true"
+  >
+    <ion-slide *ngFor="let slide of imagenes">
+      <div
+        class="menuPrincipal"
+        style="width: 100%; margin: 1.5em;"
+      >
+        <p class="pSlides">
+          {{ slide.pregunta }}
+
+          <br>
+          <br>
+          <br>
+          {{ slide.texto }}
+        </p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <br>
+
+  <div class="divBotonLogin">
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+      (click)="navegacion()"
+    >Solicitar tarjeta</ion-button>
+  </div>
+</ion-content>
