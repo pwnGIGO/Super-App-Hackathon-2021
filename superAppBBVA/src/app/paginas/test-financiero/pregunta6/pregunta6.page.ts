@@ -28,7 +28,7 @@ export class Pregunta6Page implements OnInit {
       y sus respuestas para crear la vista.
     */
       this.http
-      .obtenerJSONlocal('/preguntas-test/pregunta-6.json')
+      .obtenerJSONlocal('preguntas-test/pregunta-6.json')
       //.obtenerJSONremoto('http://localhost:5000/Preguntas/cuestionario-inicio')
       //.obtenerJSONremoto('Preguntas/cuestionario-inicio')
       .subscribe((res) => {
