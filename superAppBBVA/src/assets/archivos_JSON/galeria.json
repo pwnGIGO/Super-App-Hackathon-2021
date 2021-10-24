@@ -1,0 +1,50 @@
+[
+    {
+        "galeria": [
+            {
+                "categoria": "Categoría 1",
+                "valor": "categoria_1"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Felipe_1.jpeg",
+                "nombre": "imagen_1"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Felipe_2.jpeg",
+                "nombre": "imagen_2"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Felipe_3.jpeg",
+                "nombre": "imagen_3"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Felipe_4.jpeg",
+                "nombre": "imagen_4"
+            }
+        ]
+    },
+    {
+        "galeria": [
+            {
+                "categoria": "Categoría 2",
+                "valor": "categoria_2"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Antonio_1.jpg",
+                "nombre": "imagen_5"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Antonio_2.jpg",
+                "nombre": "imagen_6"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Antonio_3.jpg",
+                "nombre": "imagen_7"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Antonio_4.jpg",
+                "nombre": "imagen_8"
+            }
+        ]
+    }
+]
