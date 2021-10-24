@@ -106,7 +106,7 @@ export class NoticiasPage implements OnInit {
   ngOnInit() {
     this.http.obtenerJSONremoto('https://new-api-java.herokuapp.com/news/bbva').subscribe(
       (res) => {
-        console.log(Object.values(res));
+        //console.log(Object.values(res));
         this.noticias = Object.values(res).slice(10, 20);
       }
       );
