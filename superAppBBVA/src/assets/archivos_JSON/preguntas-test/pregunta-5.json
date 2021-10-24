@@ -1,0 +1,30 @@
+[
+    {
+        "nombreCuestionario": "Pregunta 5 de 6"
+    },
+    {
+      "pregunta": [
+        {
+          "tipoPregunta": 3,
+          "textoPregunta": "¿En que me debo fijar cuando voy a solicitar un crédito de nómina?",
+          "valorPregunta": "Tasa de interés, CAT, Plazos y mensualidades"
+        },
+        {
+          "etiqueta": "Tasa de interés, CAT, Plazos y mensualidades",
+          "valor": "opcion 1"
+        },
+        {
+          "etiqueta": "Cuanto me daran de crédito",
+          "valor": "opcion 2"
+        },
+        {
+          "etiqueta": "Si tengo para pagar",
+          "valor": "opcion 3"
+        },
+        {
+          "etiqueta": "Si con lo que me ofrecen alcanzó a pagar mis deudas",
+          "valor": "opcion 4"
+        }
+      ]
+    }
+  ]

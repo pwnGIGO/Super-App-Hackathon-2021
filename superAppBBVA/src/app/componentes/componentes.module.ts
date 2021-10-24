@@ -6,12 +6,16 @@ import { RouterModule } from '@angular/router';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MapaComponent } from './mapa/mapa.component';
+import { RadioGroupComponent } from './radio-group/radio-group.component';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 @NgModule({
   declarations: [
     CabeceraComponent,
     MenuPrincipalComponent,
-    MapaComponent
+    MapaComponent,
+    RadioGroupComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +25,9 @@ import { MapaComponent } from './mapa/mapa.component';
   exports: [
     CabeceraComponent,
     MenuPrincipalComponent,
-    MapaComponent
+    MapaComponent,
+    RadioGroupComponent,
+    GaleriaComponent
   ]
 })
 export class ComponentesModule { }

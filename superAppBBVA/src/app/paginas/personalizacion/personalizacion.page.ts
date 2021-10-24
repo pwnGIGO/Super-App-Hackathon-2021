@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, ModalController, NavController } from '@ionic/angular';
+import { GaleriaComponent } from 'src/app/componentes/galeria/galeria.component';
 import { HttpService } from '../../servicios/http.service';
 
 import { Camera,CameraOptions } from "@ionic-native/camera";
@@ -16,6 +17,7 @@ export class PersonalizacionPage implements OnInit {
 
   imagenes = [];
   categorias = [];
+  imagen;
   public imgUrl: string; // Dirección de imagen
   
 
@@ -25,14 +27,17 @@ export class PersonalizacionPage implements OnInit {
     private http: HttpService,
     //private camera: Camera,
     private transfer: FileTransfer,
+    private modalCtrl: ModalController,
     //private file: File,
     private imagePicker: ImagePicker
     ) { }
 
   fileTransfer: FileTransferObject = this.transfer.create();
+  ) { }
+
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/galeria.json').subscribe(
+    this.http.obtenerJSONlocal('galeria.json').subscribe(
       (res) => {
         const tam1 = Object.keys(res).length;
         const tam2 = Object.keys(res[0].galeria).length;
@@ -48,12 +53,24 @@ export class PersonalizacionPage implements OnInit {
               );
           }
         }
-
-        console.log(this.categorias);
-        console.log(this.imagenes);
-
       }
       );
+  }
+
+  async muestraGaleria(categoria) {
+    console.log(categoria);
+    const modal = await this.modalCtrl.create({
+      component: GaleriaComponent,
+      backdropDismiss: false,
+      componentProps: {
+        grupo: categoria,
+        imagenes: this.imagenes
+      },
+    });
+    await modal.present();
+
+    const { data } = await modal.onDidDismiss();
+    this.imagen = data;
   }
 
   enviaSolicitud() {

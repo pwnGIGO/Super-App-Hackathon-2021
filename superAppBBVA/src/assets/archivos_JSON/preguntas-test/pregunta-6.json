@@ -1,0 +1,30 @@
+[
+    {
+        "nombreCuestionario": "Pregunta 5 de 6"
+    },
+    {
+      "pregunta": [
+        {
+          "tipoPregunta": 3,
+          "textoPregunta": "Depositar mi dinero en fondos de inversión, me sirve para…",
+          "valorPregunta": "Que mi dinero crezca al estar en constante movimiento"
+        },
+        {
+          "etiqueta": "Que otros puedan comprarse sus cosas",
+          "valor": "opcion 1"
+        },
+        {
+          "etiqueta": "Que mi dinero crezca al estar en constante movimiento",
+          "valor": "opcion 2"
+        },
+        {
+          "etiqueta": "Que evite gastarlo y así ahorrar",
+          "valor": "opcion 3"
+        },
+        {
+          "etiqueta": "Que pueda comprarme algo en cuanto yo lo decida",
+          "valor": "opcion 4"
+        }
+      ]
+    }
+  ]

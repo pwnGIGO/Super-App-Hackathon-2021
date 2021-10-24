@@ -2,48 +2,87 @@
     {
         "galeria": [
             {
-                "categoria": "Categoría 1",
-                "valor": "categoria_1"
+                "categoria": "Minimalista",
+                "valor": "minimalista",
+                "imagen": "assets/imagenes/categorias/categoria_minimalista.png"
             },
             {
                 "url": "assets/imagenes/Galeria/Felipe_1.jpeg",
-                "nombre": "imagen_1"
+                "nombre": "imagen_1",
+                "grupo": "minimalista"
             },
             {
                 "url": "assets/imagenes/Galeria/Felipe_2.jpeg",
-                "nombre": "imagen_2"
+                "nombre": "imagen_2",
+                "grupo": "minimalista"
             },
             {
                 "url": "assets/imagenes/Galeria/Felipe_3.jpeg",
-                "nombre": "imagen_3"
+                "nombre": "imagen_3",
+                "grupo": "minimalista"
             },
             {
                 "url": "assets/imagenes/Galeria/Felipe_4.jpeg",
-                "nombre": "imagen_4"
+                "nombre": "imagen_4",
+                "grupo": "minimalista"
             }
         ]
     },
     {
         "galeria": [
             {
-                "categoria": "Categoría 2",
-                "valor": "categoria_2"
+                "categoria": "Metal",
+                "valor": "metal",
+                "imagen": "assets/imagenes/categorias/categoria_metal.jpg"
             },
             {
                 "url": "assets/imagenes/Galeria/Antonio_1.jpg",
-                "nombre": "imagen_5"
+                "nombre": "imagen_5",
+                "grupo": "metal"
             },
             {
                 "url": "assets/imagenes/Galeria/Antonio_2.jpg",
-                "nombre": "imagen_6"
+                "nombre": "imagen_6",
+                "grupo": "metal"
             },
             {
                 "url": "assets/imagenes/Galeria/Antonio_3.jpg",
-                "nombre": "imagen_7"
+                "nombre": "imagen_7",
+                "grupo": "metal"
             },
             {
                 "url": "assets/imagenes/Galeria/Antonio_4.jpg",
-                "nombre": "imagen_8"
+                "nombre": "imagen_8",
+                "grupo": "metal"
+            }
+        ]
+    },
+    {
+        "galeria": [
+            {
+                "categoria": "Animales",
+                "valor": "animales",
+                "imagen": "assets/imagenes/categorias/categorias_animales.jpg"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Rodrigo_1.jpg",
+                "nombre": "imagen_9",
+                "grupo": "animales"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Rodrigo_2.jpg",
+                "nombre": "imagen_10",
+                "grupo": "animales"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Rodrigo_3.jpg",
+                "nombre": "imagen_11",
+                "grupo": "animales"
+            },
+            {
+                "url": "assets/imagenes/Galeria/Rodrigo_4.jpg",
+                "nombre": "imagen_12",
+                "grupo": "animales"
             }
         ]
     }
