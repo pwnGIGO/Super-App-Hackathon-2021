@@ -27,7 +27,7 @@ export class VinculacionTarjetaPage implements OnInit {
     );
   }
 
-  guardaCuenta(cuenta) {
+  guardaCuenta(cuenta, noTarjeta) {
     this.cuenta = cuenta;
   }
 
