@@ -42,8 +42,6 @@ export class PersonalizacionPage implements OnInit {
   }
 
   async muestraGaleria(categoria) {
-    console.log(this.imagenes);
-    console.log(categoria);
     const modal = await this.modalCtrl.create({
       component: GaleriaComponent,
       backdropDismiss: false,
@@ -70,6 +68,8 @@ export class PersonalizacionPage implements OnInit {
       );
     // this.confirmaEnvio();
     this.navCtrl.navigateForward('/datos-tarjeta');
+    this.confirmaEnvio();
+    this.navCtrl.navigateForward('/operaciones');
   }
 
   async confirmaEnvio() {
@@ -77,7 +77,7 @@ export class PersonalizacionPage implements OnInit {
       cssClass: 'alertEnvioExitoso',
       backdropDismiss: false,
       header: '¡Solicitud exitosa!',
-      message: 'Revisaremos tu solicitud y te notificaremos si fue aceptada tu imagen.',
+      message: 'Has realizado la solicitud de tu tarjeta de transpote BBVA con éxito.',
       buttons: [
         {
           text: 'Cerrar',

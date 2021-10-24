@@ -11,9 +11,10 @@ export class OperacionesPage implements OnInit {
   @ViewChild('icono', { read: ElementRef }) flecha: ElementRef;
 
   expandido = false;
-  usuario = '';
-  datosUsuario;
-  datosTarjetas;
+  usuario: string = '';
+  datosUsuario = [];
+  saldo = [];
+  cuenta = [];
 
   constructor(
     private renderer: Renderer2,
@@ -22,18 +23,20 @@ export class OperacionesPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('/usuarios.json').subscribe(
+    this.usuario = localStorage.getItem("usuario");
+    // this.http.obtenerJSONlocal('/usuario.json').subscribe(
+      this.http.obtenerJSONremoto(`https://api-g1.herokuapp.com/auth/v1/usuario/${this.usuario}`).subscribe(
       (res) => {
-        this.datosUsuario = res[0];
-        this.datosTarjetas = res[1].tarjetas;
+        this.datosUsuario.push(res);
+        
+        for (let i = 0; i < 2; i++) {
+          this.saldo[i] = this.datosUsuario[0].tarjetas[i].saldo;
+          this.cuenta[i] = this.datosUsuario[0].tarjetas[i].idTarjeta;
+        }
       }
     );
-    this.usuario = localStorage.getItem("usuario");
   }
 
-  // console.log(this.datosUsuario[0].tarjetas[0].saldo);
-
-  // Esta función muestra la lista desplegable
   despliegaLista() {
     if (this.expandido) {
       this.renderer.setStyle(
@@ -58,7 +61,6 @@ export class OperacionesPage implements OnInit {
     this.expandido = !this.expandido;
   }
 
-  // Esta función oculta la lista desplegable
   ocultaLista() {
     this.renderer.setStyle(
       this.flecha.nativeElement,
@@ -74,7 +76,6 @@ export class OperacionesPage implements OnInit {
     this.expandido = false;
   }
 
-
   navega(id) {
     switch (id) {
       case 1: //Contactos
@@ -86,7 +87,7 @@ export class OperacionesPage implements OnInit {
       case 3: //Noticias
         this.navCtrl.navigateForward('/noticias');
         break;
-      case 4: //Noticias
+      case 4: //mapa
         this.navCtrl.navigateForward('/mapa');
         break;
       case 5: // Test financiero
@@ -96,7 +97,6 @@ export class OperacionesPage implements OnInit {
   }
 
   prueba(id){
-    //console.log(id);
     this.navCtrl.navigateForward('/mi-tarjeta');
   }
 }

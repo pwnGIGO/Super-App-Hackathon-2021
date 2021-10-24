@@ -348,7 +348,7 @@ Fondos
 
 .alert-wrapper.sc-ion-alert-md,
 .alert-wrapper.sc-ion-alert-ios {
-    --background: #072146;
+    --background: #004481;
 }
 
 .alertEnvioExitoso .sc-ion-alert-md+.alert-message.sc-ion-alert-md,
@@ -366,3 +366,28 @@ Fondos
     color: white;
 }
 
+.pDatosTag {
+  font-family: Beton-sans-medium !important;
+  color: #043263;
+  font-size: 1.3em !important;
+}
+
+.pDatos {
+  font-family: Beton-sans-light !important;
+  font-size: 1.5em !important;
+  color: black;
+  text-align: right;
+}
+
+.pDatosTag2 {
+  font-family: Beton-sans-light !important;
+  color: #666666;
+  font-size: 1.1em !important;
+}
+
+.pDatos2 {
+  font-family: Beton-sans-light !important;
+  font-size: 1.4em !important;
+  color: black;
+  text-align: right;
+}

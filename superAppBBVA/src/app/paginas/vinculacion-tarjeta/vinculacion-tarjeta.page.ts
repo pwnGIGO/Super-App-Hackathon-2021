@@ -8,25 +8,33 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./vinculacion-tarjeta.page.scss'],
 })
 export class VinculacionTarjetaPage implements OnInit {
-  datosUsuario;
-  datosTarjetas;
+  usuario: string;
+  datosUsuario = [];
+  saldo = [];
+  idCuenta = [];
   cuenta;
   conPuntos = false;
-  json= {"activa" : "true", "puntos": "false"};
+  json = { "activa": "true", "puntos": "false" };
 
   constructor(
     private http: HttpService,
     private navCtrl: NavController
-    ) { }
+  ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('usuarios.json').subscribe(
+    this.usuario = localStorage.getItem("usuario");
+
+    // this.http.obtenerJSONlocal('usuarios.json').subscribe(
+    this.http.obtenerJSONremoto(`https://api-g1.herokuapp.com/auth/v1/usuario/${this.usuario}`).subscribe(
       (res) => {
-        console.log(res[1].tarjetas)
-        this.datosUsuario = res[1];
-        this.datosTarjetas = res[1].tarjetas;
+        console.log(res);
+
+        for (let i = 0; i < 2; i++) {
+          this.saldo[i] = res['tarjetas'][i].saldo;
+          this.idCuenta[i] = res['tarjetas'][i].idTarjeta;
+        }
       }
-      );
+    );
   }
 
   guardaCuenta(cuenta, noTarjeta) {
@@ -38,7 +46,7 @@ export class VinculacionTarjetaPage implements OnInit {
     localStorage.setItem("vincula", JSON.stringify(this.json));
   }
 
-  toogleValue(){
+  toogleValue() {
     this.conPuntos = !this.conPuntos;
     //console.log(this.conPuntos)
     this.json["puntos"] = this.conPuntos.toString();

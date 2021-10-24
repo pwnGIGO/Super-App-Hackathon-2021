@@ -1,0 +1,32 @@
+{
+    "id": 1,
+    "usuario": "Usuario",
+    "password": "Usuario",
+    "numeroCuenta": "3333",
+    "puntos": 1000,
+    "tarjetas": [
+        {
+            "id": 75,
+            "nombre": "Premium",
+            "saldo": 100.0,
+            "numeroTarjeta": "1111-2222-3333-4567",
+            "idTarjeta": "4567",
+            "fechaExp": "22/10/21",
+            "tipo": "Visa",
+            "tarjetasMetro": [
+                {
+                    "id": 76,
+                    "numeroIdTarjeta": "2056-6458-5343-7110",
+                    "encendido": true,
+                    "puntosActivos": true
+                },
+                {
+                    "id": 77,
+                    "numeroIdTarjeta": "3455-2001-5343-7929",
+                    "encendido": true,
+                    "puntosActivos": false
+                }
+            ]
+        }
+    ]
+}

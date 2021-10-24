@@ -2,19 +2,81 @@
 
 <ion-content>
   <div style="padding: 1em 2em;">
-    <h2 style="font-family: Beton-sans-light;">Tarjeta de transporte BBVA</h2>
+    <h2 style="font-family: Beton-sans-light;">
+      Tarjetas de transporte BBVA vinculadas con alguna cuenta
+    </h2>
   </div>
 
-  <div class="contenedorGral">
-    <ion-item>
-      <ion-label class="ion-text-wrap labelPuntos">
-        Desactivar mi tarjeta por robo o extravío
-      </ion-label>
+  <ion-card>
+    <ion-list
+      class="tarjetaCuentas"
+      *ngFor="let item of datosTarjetas"
+    >
+      <ion-card-content style="border-bottom: 1px solid lightgrey">
+        <p class="pDatosTag">No. de tarjeta</p>
 
-      <ion-toggle
-        mode="ios"
-        style="--background-checked: #1464A5;"
-      ></ion-toggle>
-    </ion-item>
+        <p class="pDatos">{{ item.numeroIdTarjeta }}</p>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p class="pDatosTag2">¿Se paga con puntos?</p>
+            </ion-col>
+
+            <ion-col>
+              <p
+                *ngIf="item.puntosActivos"
+                class="pDatos2"
+              >Sí</p>
+
+              <p
+                *ngIf="!item.puntosActivos"
+                class="pDatos2"
+              >No</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-list>
+  </ion-card>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap labelPuntos">
+      Desactivar mi tarjeta por robo o extravío
+    </ion-label>
+
+    <ion-toggle
+      mode="ios"
+      style="--background-checked: #1464A5;"
+    ></ion-toggle>
+  </ion-item>
+
+  <br>
+
+  <div class="divBotonLogin">
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+      (click)="solicitaNueva()"
+    >
+      Solicitar una
+
+      <br>
+      nueva tarjeta
+    </ion-button>
   </div>
+
+  <div class="divBotonLogin">
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+    >
+      Solicitar
+
+      <br>
+      una reposición
+    </ion-button>
+  </div>
+
+  <br>
 </ion-content>
