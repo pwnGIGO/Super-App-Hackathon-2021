@@ -1,0 +1,82 @@
+<app-cabecera titulo="Vincular cuenta"></app-cabecera>
+
+<ion-content>
+  <div class="contenedorGral" style="color: #072146;">
+    <p>
+      Selecciona la cuenta con la que quieres vincular tu tarjeta de transporte BBVA
+    </p>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <p class="cuentaPesos">Cuentas en pesos</p>
+    </ion-card-header>
+
+    <ion-list
+      class="tarjetaCuentas"
+      *ngFor="let item of datosTarjetas"
+    >
+      <ion-card-content style="border-bottom: 1px solid lightgrey">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="4">
+              <p class="cuentaTag">Cuenta</p>
+            </ion-col>
+
+            <ion-col
+              size="8"
+              style="text-align: right;"
+            >
+              <p class="saldo">$ {{ item.saldo }}</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="4">
+              <p class="cuenta">{{ item.idTarjeta }}</p>
+            </ion-col>
+
+            <ion-col
+              size="8"
+              style="text-align: right;"
+            >
+              <p class="saldoTag">Saldo disponible</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-item
+          lines="none"
+          button="true"
+          (click)="guardaCuenta(item.idTarjeta)"
+        >
+          <ion-label class="labelVinculacion">Vincular con esta cuenta</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-list>
+  </ion-card>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap labelPuntos">
+      ¿Deseas pagar tu tarjeta con puntos BBVA?
+    </ion-label>
+
+    <ion-toggle
+      mode="ios"
+      style="--background-checked: #1464A5;"
+    ></ion-toggle>
+  </ion-item>
+
+  <br>
+
+  <div class="divBotonLogin">
+    <ion-button
+      class="btonLogin"
+      style="width: 16em;"
+      (click)="realizaVinculacion()"
+    >Vincular tarjeta</ion-button>
+  </div>
+
+  <br>
+  <br>
+</ion-content>

@@ -38,6 +38,10 @@ Fondos
   --background: #004481;
 }
 
+.drarkblue {
+  --background: #072146;
+}
+
 /* **************************
     Estilos de la cabecera
 ************************** */
@@ -239,6 +243,7 @@ Fondos
   font-family: Beton-sans-medium;
   padding: 1em;
   text-decoration: none;
+  color: white;
 }
 
 .btonLogin {
@@ -261,4 +266,38 @@ Fondos
   text-align: center;
   color: white;
   --background: transparent;
+}
+
+.slidesContenedor{
+  height: 83%;
+}
+
+.pSlides {
+  padding: 1em;
+  color: white;
+  font-family: Beton-sans-medium;
+  line-height: 2em;
+}
+
+.labelVinculacion {
+  text-align: right;
+  font-family: Beton-sans-medium;
+  --color: #072146 !important;
+  font-weight: bolder;
+}
+
+.contenedorGral {
+  font-family: Beton-sans-light;
+  font-size: 1.3em;
+  font-weight: bolder;
+  padding: 1em 2em 1em 2em;
+}
+
+
+.labelPuntos {
+  text-align: left;
+  font-family: Beton-sans-medium;
+  --color: #072146 !important;
+  font-weight: bolder;
+  padding: 1em;
 }
