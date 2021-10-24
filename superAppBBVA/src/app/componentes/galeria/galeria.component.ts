@@ -37,4 +37,8 @@ export class GaleriaComponent implements OnInit {
     this.modalCtrl.dismiss();
   }
 
+  enviaImagen() {
+    this.modalCtrl.dismiss();
+  }
+
 }

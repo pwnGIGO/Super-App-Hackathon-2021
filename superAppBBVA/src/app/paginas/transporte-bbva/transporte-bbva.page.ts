@@ -24,7 +24,7 @@ export class TransporteBBVAPage implements OnInit {
   }
 
   navegacion() {
-    this.navCtrl.navigateForward('/vinculacion-tarjeta');
+    this.navCtrl.navigateForward('/datos-tarjeta');
   }
 
 }

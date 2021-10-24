@@ -8,8 +8,10 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./vinculacion-tarjeta.page.scss'],
 })
 export class VinculacionTarjetaPage implements OnInit {
-  datosUsuario;
-  datosTarjetas;
+  usuario: string;
+  datosUsuario = [];
+  saldo = [];
+  idCuenta = [];
   cuenta;
   conPuntos = false;
 
@@ -19,10 +21,17 @@ export class VinculacionTarjetaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.obtenerJSONlocal('usuarios.json').subscribe(
+    this.usuario = localStorage.getItem("usuario");
+    
+    // this.http.obtenerJSONlocal('usuarios.json').subscribe(
+    this.http.obtenerJSONremoto(`https://api-g1.herokuapp.com/auth/v1/usuario/${this.usuario}`).subscribe(
       (res) => {
-        this.datosUsuario = res[0];
-        this.datosTarjetas = res[1].tarjetas;
+        console.log(res);
+        
+        for (let i = 0; i < 2; i++) {
+          this.saldo[i] = res['tarjetas'][i].saldo;
+          this.idCuenta[i] = res['tarjetas'][i].idTarjeta;
+        }
       }
     );
   }

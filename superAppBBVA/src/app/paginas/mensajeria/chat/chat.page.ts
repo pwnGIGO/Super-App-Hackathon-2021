@@ -31,7 +31,6 @@ export class ChatPage implements OnInit {
   ngOnInit() {
     this.http.obtenerJSONremoto('https://chat-api-bots.herokuapp.com/chat').subscribe(
       (res) => {
-        console.log(res);
         this.msgList = res
       }
       );

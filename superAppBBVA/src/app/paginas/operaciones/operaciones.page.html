@@ -263,6 +263,10 @@
             </ion-item>
         </div>
 
+
+
+
+
         <ion-card>
             <ion-card-header>
                 <p class="cuentaPesos">Cuentas en pesos</p>
@@ -270,7 +274,7 @@
 
             <ion-list
                 class="tarjetaCuentas"
-                *ngFor="let item of datosTarjetas"
+                *ngFor="let item of saldo; let i=index"
             >
                 <ion-card-content
                     style="border-bottom: 1px solid lightgrey"
@@ -285,13 +289,13 @@
                                 size="8"
                                 style="text-align: right;"
                             >
-                                <p class="saldo">$ {{ item.saldo }}</p>
+                                <p class="saldo">$ {{ saldo[i] }}</p>
                             </ion-col>
                         </ion-row>
 
                         <ion-row>
                             <ion-col size="4">
-                                <p class="cuenta">{{ item.idTarjeta }}</p>
+                                <p class="cuenta">{{ cuenta[i] }}</p>
                             </ion-col>
 
                             <ion-col
