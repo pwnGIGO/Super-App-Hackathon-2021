@@ -68,7 +68,7 @@ export class PersonalizacionPage implements OnInit {
       (error) => { console.log("Algo salió mal"); }
     );
     this.confirmaEnvio();
-    this.navCtrl.navigateForward('/personalizacion');
+    this.navCtrl.navigateForward('/operaciones');
   }
 
   async confirmaEnvio() {
