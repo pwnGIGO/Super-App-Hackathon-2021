@@ -12,10 +12,11 @@ import { HttpService } from './servicios/http.service';
 import { HttpClientModule } from '@angular/common/http';
 
 /* PARA CARGAR IMAGENES, TOMAR FOTOS */
-import { Camera } from "@ionic-native/camera";
-import { File } from "@ionic-native/file";
-import { FileTransfer } from "@ionic-native/file-transfer";
-import { ImagePicker } from "@ionic-native/image-picker";
+//import { Camera } from "@ionic-native/camera/ngx";
+import { File } from '@ionic-native/file/ngx';
+import { FileTransfer } from "@ionic-native/file-transfer/ngx";
+//import { ImagePicker } from "@ionic-native/image-picker";
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,10 +31,9 @@ import { ImagePicker } from "@ionic-native/image-picker";
   [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     HttpService,
-    /*Camera,
     File,
-    FileTransfer,
-    ImagePicker,*/
+    ImagePicker,
+    FileTransfer
   ],
   bootstrap: [AppComponent],
 })
