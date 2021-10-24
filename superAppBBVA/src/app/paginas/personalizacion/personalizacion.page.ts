@@ -33,7 +33,7 @@ export class PersonalizacionPage implements OnInit {
     ) { }
 
   fileTransfer: FileTransferObject = this.transfer.create();
-  ) { }
+  
 
 
   ngOnInit() {
