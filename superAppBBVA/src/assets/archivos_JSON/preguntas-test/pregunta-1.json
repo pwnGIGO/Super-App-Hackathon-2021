@@ -1,0 +1,30 @@
+[
+    {
+        "nombreCuestionario": "Pregunta 1 de 6"
+    },
+    {
+      "pregunta": [
+        {
+          "tipoPregunta": 3,
+          "textoPregunta": "¿Cuánto dinero debería colocar en sus ahorros mensualmente?",
+          "valorPregunta": "10% de su sueldo"
+        },
+        {
+          "etiqueta": "2% de su sueldo",
+          "valor": "opcion 1"
+        },
+        {
+          "etiqueta": "10% de su sueldo",
+          "valor": "opcion 2"
+        },
+        {
+          "etiqueta": "Todo el dinero que le sobre a final de mes",
+          "valor": "opcion 3"
+        },
+        {
+          "etiqueta": "Cualquier billete de baja denominación que encuentre en su sofá, piso o en el carro",
+          "valor": "opcion 4"
+        }
+      ]
+    }
+  ]

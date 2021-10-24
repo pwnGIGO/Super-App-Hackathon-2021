@@ -1,0 +1,33 @@
+<app-cabecera titulo="Educación Financiera"></app-cabecera>
+
+<ion-content>
+
+  <div class="contenedorTitulo">
+    <h2>{{ nombreCuestionario }}</h2>
+</div>
+
+  <div class="contenedorGral">
+    <ion-list *ngFor="let item of propiedadesPregunta; let i=index">    
+      <ion-item lines="none">
+            <h3 class="tituloContenedorCentrado ion-text-wrap">{{ item.textoPregunta }}</h3>
+        </ion-item>
+
+        <div [ngSwitch]="item.tipoPregunta">
+            <app-radio-group
+                *ngSwitchCase="3"
+                [valorPregunta]="item.valorPregunta"
+                [valorInicial]="item.valorInicial"
+                [listaRespuestas]="respuestas[i]"
+                (datos)="recibeRespuesta($event, i)"
+            ></app-radio-group>
+        </div>
+    </ion-list>
+
+    <br>
+
+    <ion-button mode="ios" expand="block"(click)="evaluaRespuesta()">Evaluar</ion-button>
+
+    <ion-button mode="ios" expand="block"(click)="enviaRespuesta()">Siguiente pregunta</ion-button>
+</div>
+
+</ion-content>

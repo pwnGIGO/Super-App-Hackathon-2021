@@ -1,0 +1,30 @@
+[
+    {
+        "nombreCuestionario": "Pregunta 4 de 6"
+    },
+    {
+      "pregunta": [
+        {
+          "tipoPregunta": 3,
+          "textoPregunta": "¿Cuál es el día perfecto para usar tu tarjeta de crédito BBVA?",
+          "valorPregunta": "En mi fecha de corte"
+        },
+        {
+          "etiqueta": "Un día antes de mi fecha de corte",
+          "valor": "opcion 1"
+        },
+        {
+          "etiqueta": "En mi fecha de corte",
+          "valor": "opcion 2"
+        },
+        {
+          "etiqueta": "Un dia antes de efectuar el pago mínimo de mi tarjeta",
+          "valor": "opcion 3"
+        },
+        {
+          "etiqueta": "El día que pago mi tarjeta de crédito",
+          "valor": "opcion 4"
+        }
+      ]
+    }
+  ]

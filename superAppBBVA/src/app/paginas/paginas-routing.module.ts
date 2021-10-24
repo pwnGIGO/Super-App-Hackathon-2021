@@ -35,21 +35,24 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
-  },  {
+  },
+  {
     path: 'transporte-bbva',
     loadChildren: () => import('./transporte-bbva/transporte-bbva.module').then( m => m.TransporteBBVAPageModule)
   },
   {
     path: 'vinculacion-tarjeta',
     loadChildren: () => import('./vinculacion-tarjeta/vinculacion-tarjeta.module').then( m => m.VinculacionTarjetaPageModule)
-  }
-
-
-
+  },
+  {
+    path: 'test-financiero',
+    loadChildren: () => import('./test-financiero/test-financiero.module').then( m => m.TestFinancieroPageModule)
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+
 export class PaginasPageRoutingModule {}

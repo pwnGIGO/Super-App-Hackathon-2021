@@ -1,0 +1,30 @@
+[
+    {
+        "nombreCuestionario": "Pregunta 3 de 6"
+    },
+    {
+      "pregunta": [
+        {
+          "tipoPregunta": 3,
+          "textoPregunta": "¿Cuáles son los 5 factores que influyen en su puntaje de crédito?",
+          "valorPregunta": "Historial de pago, índice de utilización, aplicaciones de crédito nuevas, duración del uso del crédito, tipos de crédito en su historial"
+        },
+        {
+          "etiqueta": "Monto de la deuda, la tasa de interés más alta, número de tarjetas de crédito, morosidad, excedentes",
+          "valor": "opcion 1"
+        },
+        {
+          "etiqueta": "Ingreso, número de tarjetas de crédito, historial de pago, penalidades y ahorros",
+          "valor": "opcion 2"
+        },
+        {
+          "etiqueta": "Linda sonrisa, actitud ganadora, prometer ser más responsable, el encantamiento correcto para un puntaje de crédito, ojo de tritón",
+          "valor": "opcion 3"
+        },
+        {
+          "etiqueta": "Historial de pago, índice de utilización, aplicaciones de crédito nuevas, duración del uso del crédito, tipos de crédito en su historial",
+          "valor": "opcion 4"
+        }
+      ]
+    }
+  ]

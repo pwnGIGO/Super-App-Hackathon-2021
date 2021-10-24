@@ -1,0 +1,14 @@
+<ion-radio-group
+  mode="ios"
+  value="{{ valorInicial }}"
+  (ionChange)="guardaValores($event)"
+>
+  <ion-item *ngFor="let item of listaRespuestas">
+    <ion-label>{{item.etiqueta}}</ion-label>
+
+    <ion-radio
+      slot="start"
+      value="{{ item.valor }}"
+    ></ion-radio>
+  </ion-item>
+</ion-radio-group>
