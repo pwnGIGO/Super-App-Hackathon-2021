@@ -1,0 +1,21 @@
+<ion-content>
+  <!-- <ion-list *ngFor="let item of listaImagenes">
+    <ion-item>
+      <img [src]="item">
+    </ion-item>
+  </ion-list> -->
+
+  <ion-slides
+    class="slideCategorias"
+    pager="true"
+  >
+    <ion-slide *ngFor="let item of listaImagenes">
+      <div
+        style="width: 100%; margin: 1.5em;"
+        button="true"
+      >
+        <img [src]="item">
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

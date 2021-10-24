@@ -36,7 +36,7 @@ export class VinculacionTarjetaPage implements OnInit {
   }
 
   realizaVinculacion() {
-    this.navCtrl.navigateForward('/');
+    this.navCtrl.navigateForward('/personalizacion');
   }
 
 }

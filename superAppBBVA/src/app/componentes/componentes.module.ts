@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MapaComponent } from './mapa/mapa.component';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 @NgModule({
   declarations: [
     CabeceraComponent,
     MenuPrincipalComponent,
-    MapaComponent
+    MapaComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { MapaComponent } from './mapa/mapa.component';
   exports: [
     CabeceraComponent,
     MenuPrincipalComponent,
-    MapaComponent
+    MapaComponent,
+    GaleriaComponent
   ]
 })
 export class ComponentesModule { }
