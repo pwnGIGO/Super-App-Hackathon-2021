@@ -11,7 +11,7 @@ export class OperacionesPage implements OnInit {
   @ViewChild('icono', { read: ElementRef }) flecha: ElementRef;
 
   expandido = false;
-  usuario = 'Antonio';
+  usuario = '';
   datosUsuario;
   datosTarjetas;
 
@@ -28,6 +28,7 @@ export class OperacionesPage implements OnInit {
         this.datosTarjetas = res[1].tarjetas;
       }
     );
+    this.usuario = localStorage.getItem("usuario");
   }
 
   // console.log(this.datosUsuario[0].tarjetas[0].saldo);

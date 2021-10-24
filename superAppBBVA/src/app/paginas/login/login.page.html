@@ -12,12 +12,12 @@
             slot="end"
             style="height: 5em;"
         >
-            <ion-menu-button menu="menuPrincipal">
+            <!--ion-menu-button menu="menuPrincipal">
                 <ion-icon
                     name="menu"
                     size="large"
                 ></ion-icon>
-            </ion-menu-button>
+            </ion-menu-button-->
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
@@ -31,14 +31,13 @@
             <ion-label
                 class="labelLogin"
                 position="floating"
-            >Número celular</ion-label>
+            >Usuario</ion-label>
 
             <ion-input
                 class="inputLogin"
-                inputmode="numeric"
                 type="text"
                 (ionFocus)="expandeLogin()"
-                (ionChange)="guardaValores($event)"
+                (ionChange)="guardaUsuario($event)"
             ></ion-input>
         </ion-item>
 
@@ -57,7 +56,7 @@
                         inputmode="text"
                         [type]="esPass"
                         (ionFocus)="expandeLogin()"
-                        (ionChange)="guardaValores($event)"
+                        (ionChange)="guardaPass($event)"
                     ></ion-input>
                 </ion-item>
             </ion-col>
@@ -93,7 +92,6 @@
             >
                 <a
                     class="aLogin"
-                    href=""
                 >Olvidé mi contraseña</a>
             </ion-col>
 
