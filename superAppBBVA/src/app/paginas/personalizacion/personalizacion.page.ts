@@ -25,7 +25,7 @@ export class PersonalizacionPage implements OnInit {
       (res) => {
         const tam1 = Object.keys(res).length;
         const tam2 = Object.keys(res[0].galeria).length;
-        
+
         for (let i = 0; i < tam1; i++) {
           this.categorias.push(
             res[i].galeria[0]
@@ -57,6 +57,7 @@ export class PersonalizacionPage implements OnInit {
   }
 
   enviaSolicitud() {
+    console.log(localStorage.getItem("vincula"));
     let json = JSON.parse(localStorage.getItem("vincula"));
     console.log("JSON final");
     console.log(json);
@@ -64,12 +65,10 @@ export class PersonalizacionPage implements OnInit {
       (res: any) => {
         console.log("Enviado con éxito");
       },
-      (error) => {console.log("Algo salió mal");}
-      );
-    // this.confirmaEnvio();
-    this.navCtrl.navigateForward('/datos-tarjeta');
+      (error) => { console.log("Algo salió mal"); }
+    );
     this.confirmaEnvio();
-    this.navCtrl.navigateForward('/operaciones');
+    this.navCtrl.navigateForward('/personalizacion');
   }
 
   async confirmaEnvio() {

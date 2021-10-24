@@ -14,7 +14,7 @@ export class VinculacionTarjetaPage implements OnInit {
   idCuenta = [];
   cuenta;
   conPuntos = false;
-  json = { "activa": "true", "puntos": "false" };
+  json = { "user": 'Rodrigo', "numeroTarjeta": '2222-2222-3333-4567', "urlImage": '', "activa": "true", "puntos": "false" };
 
   constructor(
     private http: HttpService,
@@ -38,12 +38,14 @@ export class VinculacionTarjetaPage implements OnInit {
   }
 
   guardaCuenta(cuenta, noTarjeta) {
+    console.log('guardando cuenta');
     this.cuenta = cuenta;
-    this.json["user"] = this.datosUsuario.usuario
-    this.json["numeroTarjeta"] = noTarjeta
+    /* this.json["user"] = this.datosUsuario['usuario']
+    this.json["numeroTarjeta"] = noTarjeta */
 
-    console.log(this.json);
+    console.log('1',this.json);
     localStorage.setItem("vincula", JSON.stringify(this.json));
+    console.log('final de guardando cuenta');
   }
 
   toogleValue() {
