@@ -9,7 +9,7 @@ import { HttpService } from '../../servicios/http.service';
 })
 export class NoticiasPage implements OnInit {
 
-  noticias;/*[
+  noticias = [];/*[
   {
     id: 1,
     imagen: "bbva.svg",
@@ -104,10 +104,10 @@ export class NoticiasPage implements OnInit {
   constructor(private navCtrl: NavController, private http: HttpService) {}
 
   ngOnInit() {
-    this.http.obtenerJSONremoto('https://new-api-java.herokuapp.com/news').subscribe(
+    this.http.obtenerJSONremoto('https://new-api-java.herokuapp.com/news/bbva').subscribe(
       (res) => {
-        console.log(res);
-        this.noticias = res;
+        console.log(Object.values(res));
+        this.noticias = Object.values(res).slice(10, 20);
       }
       );
 

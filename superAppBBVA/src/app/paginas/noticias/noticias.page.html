@@ -48,15 +48,15 @@
   <ion-card *ngFor="let noticia of noticias">
     <ion-item>
       <ion-avatar slot="start">
-        <img src="{{ noticia.url_img }}">
+        <img src="{{ noticia.urlToImage }}">
       </ion-avatar>
       <ion-label>
         <h3>{{ noticia.title }}</h3>
-        <p>{{ noticia.date }}</p>
+        <p>{{ noticia.publishedAt }}</p>
       </ion-label>
     </ion-item>
 
-    <img src="{{ noticia.url_img }}" (click)="abrirNoticia(noticia.id)">
+    <img src="{{ noticia.urlToImage }}" (click)="abrirNoticia(noticia.id)">
     <ion-card-header>
       <ion-card-title>{{ noticia.description }}</ion-card-title>
     </ion-card-header>
