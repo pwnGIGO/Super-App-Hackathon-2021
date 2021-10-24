@@ -75,7 +75,7 @@ export class LoginPage implements OnInit {
         cssClass: 'alertEnvioExitoso',
         backdropDismiss: false,
         header: '¡Datos incorrectos!',
-        message: 'Psst, intenta con Rodrigo-Rodrigo',
+        message: 'Psst, intenta con estos datos<br>Usuario: Super<br>Pass: Super',
         buttons: [
         {
           text: 'Cerrar',
