@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonContent } from '@ionic/angular';
+import { HttpService } from '../../../servicios/http.service';
 
 @Component({
   selector: 'app-chat',
@@ -17,58 +18,23 @@ export class ChatPage implements OnInit {
   toUser: string = "HealthBot";
   start_typing: any;
   loader: boolean;
-  constructor(public activRoute: ActivatedRoute) {
+  constructor(public activRoute: ActivatedRoute, private http: HttpService) {
 
     this.paramData = {
       name: "Antonio",
       image: "assets/chat/chat5.jpg"
     };
 
-    this.msgList = [
-    {
-      userId: "HealthBot",
-      userName: "HealthBot",
-      userAvatar: "assets/chat/chat4.jpg",
-      time: "12:00",
-      message: "Que onda, cómo estás?",
-      id: 0
-    },
-    {
-      userId: "Me",
-      userName: "Me",
-      userAvatar: "assets/chat/chat5.jpg",
-      time: "12:03",
-      message: "Bien, ya te hice el pago por BBVA :D",
-      id: 1,
-    },
-    {
-      userId: "HealthBot",
-      userName: "HealthBot",
-      userAvatar: "assets/chat/chat4.jpg",
-      time: "12:05",
-      message: "Sale gracias, ¿cuánto fue lo que depositaste?",
-      id: 3
-    },
-    {
-      userId: "Me",
-      userName: "Me",
-      userAvatar: "assets/chat/chat5.jpg",
-      time: "12:06",
-      message: "1500, aún me falta la mitad",
-      id: 4
-    },
-    {
-      userId: "HealthBot",
-      userName: "HealthBot",
-      userAvatar: "assets/chat/chat4.jpg",
-      time: "12:07",
-      message: "Sale, no te preocupes xD",
-      id: 5
-    }
-    ];
+    this.msgList = []
   }
 
   ngOnInit() {
+    this.http.obtenerJSONremoto('https://chat-api-bots.herokuapp.com/chat').subscribe(
+      (res) => {
+        console.log(res);
+        this.msgList = res
+      }
+      );
   }
   sendMsg() {
     if (this.user_input !== '') {

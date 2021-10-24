@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { HttpService } from '../../servicios/http.service';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,15 +17,17 @@ export class LoginPage implements OnInit {
   @ViewChild('contenido', { read: ElementRef }) cont: ElementRef;
 
   pass = '';
-  esPass = 'password';
   usuario = 'Rodrigo';
+
+  esPass = 'password';
   mostrar = false;
   expandido = true;
 
   constructor(
     private peticion: HttpService,
     private navCtrl: NavController,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private alertCtrl: AlertController
   ) { }
 
   ngOnInit() { }
@@ -34,7 +36,11 @@ export class LoginPage implements OnInit {
     this.renderer.setStyle(this.cont.nativeElement, 'padding', '5em 3em');
   }
 
-  guardaValores(valor) {
+  guardaUsuario(valor) {
+    this.usuario = valor.detail.value;
+  }
+
+  guardaPass(valor) {
     this.pass = valor.detail.value;
   }
 
@@ -51,18 +57,32 @@ export class LoginPage implements OnInit {
   }
 
   enviaDatos() {
-    console.log('Entre');
     let json = { usuario: this.usuario, password: this.pass };
+    console.log(json)
     this.peticion.login(json).subscribe(
       (res: any) => {
-        console.log(res);
-        console.log('Redireccionando al inicio');
+        localStorage.setItem("usuario", this.usuario);
         this.navCtrl.navigateForward('/operaciones');
       },
       (error) => {
-        console.log('Redireccionando al inicio pero con login incorrecto');
-        this.navCtrl.navigateForward('/operaciones');
+        this.alertError();
       }
     );
   }
+
+      async alertError() {
+      const alertEnvio = await this.alertCtrl.create({
+        cssClass: 'alertEnvioExitoso',
+        backdropDismiss: false,
+        header: '¡Datos incorrectos!',
+        message: 'Psst, intenta con Rodrigo-Rodrigo',
+        buttons: [
+        {
+          text: 'Cerrar',
+          role: 'cancel',
+        },
+        ],
+      });
+      await alertEnvio.present();
+    }
 }
