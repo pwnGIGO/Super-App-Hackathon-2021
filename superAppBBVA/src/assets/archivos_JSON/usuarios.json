@@ -1,39 +1,107 @@
 [
-  {
-    "id": 13,
-    "usuario": "Rodrigo",
-    "password": "qwerty",
-    "numeroCuenta": "9028"
-  },
-  {
-    "tarjetas": [
-      {
-        "id": 14,
-        "nombre": "Premium",
-        "numeroTrajeta": "1111-2222-3333-1084",
-        "idTarjeta": "1084",
-        "saldo": "10,000000.00",
-        "fechaExp": "22/10/21",
-        "tipo": "Visa"
-      },
-      {
-        "id": 15,
-        "nombre": "Basica",
-        "numeroTrajeta": "1111-2222-3333-1234",
-        "idTarjeta": "1234",
-        "saldo": "29,800.45",
-        "fechaExp": "22/10/21",
-        "tipo": "MasterCard"
-      },
-      {
-        "id": 16,
-        "nombre": "Platinum",
-        "numeroTrajeta": "1111-2222-3333-0987",
-        "idTarjeta": "0987",
-        "saldo": "0.00",
-        "fechaExp": "22/10/21",
-        "tipo": "Visa"
-      }
-    ]
-  }
+    {
+        "id": 1,
+        "usuario": "Usuario",
+        "password": "Usuario",
+        "numeroCuenta": "3333",
+        "puntos": 1000,
+        "tarjetas": [
+            {
+                "id": 120,
+                "nombre": "Premium",
+                "saldo": 100.0,
+                "numeroTarjeta": "1111-2222-3333-4567",
+                "idTarjeta": "4567",
+                "fechaExp": "22/10/21",
+                "tipo": "Visa",
+                "tarjetasMetro": []
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "usuario": "Rodrigo",
+        "password": "Rodrigo",
+        "numeroCuenta": "4444",
+        "puntos": 1000,
+        "tarjetas": [
+            {
+                "id": 121,
+                "nombre": "Basica",
+                "saldo": 100.0,
+                "numeroTarjeta": "2222-2222-3333-4567",
+                "idTarjeta": "4567",
+                "fechaExp": "22/10/21",
+                "tipo": "Visa",
+                "tarjetasMetro": []
+            },
+            {
+                "id": 122,
+                "nombre": "Digital",
+                "saldo": 100.0,
+                "numeroTarjeta": "5555-2222-3333-4567",
+                "idTarjeta": "4567",
+                "fechaExp": "22/10/21",
+                "tipo": "Visa",
+                "tarjetasMetro": []
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "usuario": "Antonio",
+        "password": "Antonio",
+        "numeroCuenta": "5555",
+        "puntos": 1000,
+        "tarjetas": [
+            {
+                "id": 123,
+                "nombre": "Premium",
+                "saldo": 100.0,
+                "numeroTarjeta": "7777-2222-3333-4567",
+                "idTarjeta": "4567",
+                "fechaExp": "22/10/21",
+                "tipo": "Visa",
+                "tarjetasMetro": []
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "usuario": "Felipe",
+        "password": "Felipe",
+        "numeroCuenta": "6666",
+        "puntos": 1000,
+        "tarjetas": [
+            {
+                "id": 124,
+                "nombre": "Premium",
+                "saldo": 100.0,
+                "numeroTarjeta": "8888-2222-3333-4567",
+                "idTarjeta": "4567",
+                "fechaExp": "22/10/21",
+                "tipo": "Visa",
+                "tarjetasMetro": []
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "usuario": "Super",
+        "password": "Super",
+        "numeroCuenta": "7777",
+        "puntos": 1000,
+        "tarjetas": [
+            {
+                "id": 125,
+                "nombre": "Oro",
+                "saldo": 100.0,
+                "numeroTarjeta": "9999-2222-3333-4567",
+                "idTarjeta": "4567",
+                "fechaExp": "22/10/21",
+                "tipo": "Visa",
+                "tarjetasMetro": []
+            }
+        ]
+    }
 ]

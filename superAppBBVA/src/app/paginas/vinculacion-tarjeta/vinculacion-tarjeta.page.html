@@ -48,7 +48,7 @@
         <ion-item
           lines="none"
           button="true"
-          (click)="guardaCuenta(item.idTarjeta, item.numeroTrajeta)"
+          (click)="guardaCuenta(item.idTarjeta, item.numeroTarjeta)"
         >
           <ion-label class="labelVinculacion">Vincular con esta cuenta</ion-label>
         </ion-item>
@@ -64,6 +64,7 @@
     <ion-toggle
       mode="ios"
       style="--background-checked: #1464A5;"
+      (ionChange)="toogleValue()"
     ></ion-toggle>
   </ion-item>
 

@@ -12,23 +12,36 @@ export class VinculacionTarjetaPage implements OnInit {
   datosTarjetas;
   cuenta;
   conPuntos = false;
+  json= {"activa" : "true", "puntos": "false"};
 
   constructor(
     private http: HttpService,
     private navCtrl: NavController
-  ) { }
+    ) { }
 
   ngOnInit() {
     this.http.obtenerJSONlocal('usuarios.json').subscribe(
       (res) => {
-        this.datosUsuario = res[0];
+        console.log(res[1].tarjetas)
+        this.datosUsuario = res[1];
         this.datosTarjetas = res[1].tarjetas;
       }
-    );
+      );
   }
 
   guardaCuenta(cuenta, noTarjeta) {
     this.cuenta = cuenta;
+    this.json["user"] = this.datosUsuario.usuario
+    this.json["numeroTarjeta"] = noTarjeta
+
+    console.log(this.json);
+    localStorage.setItem("vincula", JSON.stringify(this.json));
+  }
+
+  toogleValue(){
+    this.conPuntos = !this.conPuntos;
+    //console.log(this.conPuntos)
+    this.json["puntos"] = this.conPuntos.toString();
   }
 
   pagaConPuntos(evento) {

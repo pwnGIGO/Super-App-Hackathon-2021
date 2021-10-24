@@ -25,4 +25,11 @@ export class HttpService {
 
     return this.http.post<any>(path, datosUsuario);
   }
+
+  vinculaTarjeta(datos: any){
+    const path = 'https://api-g1.herokuapp.com/auth/v1/sincroniza/tarjetametro';
+    console.log("VA a guardar");
+    console.log(datos);
+    return this.http.post<any>(path, datos);
+  }
 }

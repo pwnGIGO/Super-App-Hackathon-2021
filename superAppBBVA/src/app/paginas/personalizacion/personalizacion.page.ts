@@ -59,6 +59,15 @@ export class PersonalizacionPage implements OnInit {
   }
 
   enviaSolicitud() {
+    let json = JSON.parse(localStorage.getItem("vincula"));
+    console.log("JSON final");
+    console.log(json);
+    this.http.vinculaTarjeta(json).subscribe(
+      (res: any) => {
+        console.log("Enviado con éxito");
+      },
+      (error) => {console.log("Algo salió mal");}
+      );
     // this.confirmaEnvio();
     this.navCtrl.navigateForward('/datos-tarjeta');
   }

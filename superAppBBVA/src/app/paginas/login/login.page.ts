@@ -58,7 +58,6 @@ export class LoginPage implements OnInit {
 
   enviaDatos() {
     let json = { usuario: this.usuario, password: this.pass };
-    console.log(json)
     this.peticion.login(json).subscribe(
       (res: any) => {
         localStorage.setItem("usuario", this.usuario);
