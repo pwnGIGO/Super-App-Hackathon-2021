@@ -38,6 +38,14 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./paginas/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'transporte-bbva',
+    loadChildren: () => import('./paginas/transporte-bbva/transporte-bbva.module').then( m => m.TransporteBBVAPageModule)
+  },
+  {
+    path: 'vinculacion-tarjeta',
+    loadChildren: () => import('./paginas/vinculacion-tarjeta/vinculacion-tarjeta.module').then( m => m.VinculacionTarjetaPageModule)
   }
 ];
 

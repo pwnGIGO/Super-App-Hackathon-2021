@@ -19,7 +19,7 @@ export class OperacionesPage implements OnInit {
     private renderer: Renderer2,
     private http: HttpService,
     private navCtrl: NavController
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.http.obtenerJSONlocal('/usuarios.json').subscribe(
@@ -27,7 +27,7 @@ export class OperacionesPage implements OnInit {
         this.datosUsuario = res[0];
         this.datosTarjetas = res[1].tarjetas;
       }
-      );
+    );
   }
 
   // console.log(this.datosUsuario[0].tarjetas[0].saldo);
@@ -39,19 +39,19 @@ export class OperacionesPage implements OnInit {
         this.flecha.nativeElement,
         'transform',
         'rotateZ(0deg)'
-        );
+      );
       this.renderer.setStyle(this.cont.nativeElement, 'max-height', '0px');
     } else {
       this.renderer.setStyle(
         this.flecha.nativeElement,
         'transform',
         'rotateZ(180deg)'
-        );
+      );
       this.renderer.setStyle(
         this.flecha.nativeElement,
         'transition',
         '.7s ease-in-out'
-        );
+      );
       this.renderer.setStyle(this.cont.nativeElement, 'max-height', '3000px');
     }
     this.expandido = !this.expandido;
@@ -63,31 +63,31 @@ export class OperacionesPage implements OnInit {
       this.flecha.nativeElement,
       'transition',
       '.7s ease-in-out'
-      );
+    );
     this.renderer.setStyle(
       this.flecha.nativeElement,
       'transform',
       'rotateZ(0deg)'
-      );
+    );
     this.renderer.setStyle(this.cont.nativeElement, 'max-height', '0px');
     this.expandido = false;
   }
 
 
-  navega(id){
-    switch(id){
+  navega(id) {
+    switch (id) {
       case 1: //Contactos
-      this.navCtrl.navigateForward('/contactos');
-      break;
+        this.navCtrl.navigateForward('/contactos');
+        break;
       case 2: //Personalizar
-      this.navCtrl.navigateForward('/personalizacion');
-      break;
+        this.navCtrl.navigateForward('/personalizacion');
+        break;
       case 3: //Noticias
-      this.navCtrl.navigateForward('/noticias');
-      break;
+        this.navCtrl.navigateForward('/noticias');
+        break;
       case 4: //Noticias
-      this.navCtrl.navigateForward('/mapa');
-      break;
+        this.navCtrl.navigateForward('/mapa');
+        break;
     }
   }
 }
